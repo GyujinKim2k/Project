@@ -1,0 +1,63 @@
+nohup: ignoring input
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+`Trainer(limit_train_batches=1.0)` was configured so 100% of the batches per epoch will be used..
+2025-05-29 06:50:25.219433: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1748501425.235470 1728887 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1748501425.240499 1728887 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1748501425.254071 1728887 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1748501425.254101 1728887 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1748501425.254108 1728887 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1748501425.254113 1728887 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-05-29 06:50:25.257827: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Restoring states from the checkpoint path at checkpoints/last.ckpt
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+   | Name                               | Type                            | Params | Mode 
+------------------------------------------------------------------------------------------------
+0  | loss                               | QuantileLoss                    | 0      | train
+1  | logging_metrics                    | ModuleList                      | 0      | train
+2  | input_embeddings                   | MultiEmbedding                  | 21.6 K | train
+3  | prescalers                         | ModuleDict                      | 1.2 K  | train
+4  | static_variable_selection          | VariableSelectionNetwork        | 13.8 K | train
+5  | encoder_variable_selection         | VariableSelectionNetwork        | 126 K  | train
+6  | decoder_variable_selection         | VariableSelectionNetwork        | 48.0 K | train
+7  | static_context_variable_selection  | GatedResidualNetwork            | 16.8 K | train
+8  | static_context_initial_hidden_lstm | GatedResidualNetwork            | 16.8 K | train
+9  | static_context_initial_cell_lstm   | GatedResidualNetwork            | 16.8 K | train
+10 | static_context_enrichment          | GatedResidualNetwork            | 16.8 K | train
+11 | lstm_encoder                       | LSTM                            | 33.3 K | train
+12 | lstm_decoder                       | LSTM                            | 33.3 K | train
+13 | post_lstm_gate_encoder             | GatedLinearUnit                 | 8.3 K  | train
+14 | post_lstm_add_norm_encoder         | AddNorm                         | 128    | train
+15 | static_enrichment                  | GatedResidualNetwork            | 20.9 K | train
+16 | multihead_attn                     | InterpretableMultiHeadAttention | 9.1 K  | train
+17 | post_attn_gate_norm                | GateAddNorm                     | 8.4 K  | train
+18 | pos_wise_ff                        | GatedResidualNetwork            | 16.8 K | train
+19 | pre_output_gate_norm               | GateAddNorm                     | 8.4 K  | train
+20 | output_layer                       | Linear                          | 455    | train
+------------------------------------------------------------------------------------------------
+415 K     Trainable params
+0         Non-trainable params
+415 K     Total params
+1.661     Total estimated model params size (MB)
+794       Modules in train mode
+0         Modules in eval mode
+Restored all states from the checkpoint at checkpoints/last.ckpt
+Metric val_loss improved by 21.344 >= min_delta = 0.0001. New best score: 11351.527
+Metric val_loss improved by 6.965 >= min_delta = 0.0001. New best score: 11344.562
+Metric val_loss improved by 7.327 >= min_delta = 0.0001. New best score: 11337.235
+Metric val_loss improved by 5.915 >= min_delta = 0.0001. New best score: 11331.320
+Metric val_loss improved by 10.200 >= min_delta = 0.0001. New best score: 11321.120
+Metric val_loss improved by 18.607 >= min_delta = 0.0001. New best score: 11302.513
+Metric val_loss improved by 4.470 >= min_delta = 0.0001. New best score: 11298.043
+Metric val_loss improved by 2.285 >= min_delta = 0.0001. New best score: 11295.758
+Metric val_loss improved by 9.335 >= min_delta = 0.0001. New best score: 11286.423
+Metric val_loss improved by 4.319 >= min_delta = 0.0001. New best score: 11282.104
+Metric val_loss improved by 4.872 >= min_delta = 0.0001. New best score: 11277.231
+Metric val_loss improved by 3.387 >= min_delta = 0.0001. New best score: 11273.845
+Metric val_loss improved by 3.031 >= min_delta = 0.0001. New best score: 11270.813
+[rank: 0] Received SIGTERM: 15

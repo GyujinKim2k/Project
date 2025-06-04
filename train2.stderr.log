@@ -1,0 +1,131 @@
+nohup: ignoring input
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+`Trainer(limit_train_batches=1.0)` was configured so 100% of the batches per epoch will be used..
+2025-05-30 06:43:29.204334: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1748587409.220003 1748611 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1748587409.224905 1748611 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1748587409.237287 1748611 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1748587409.237316 1748611 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1748587409.237321 1748611 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1748587409.237325 1748611 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-05-30 06:43:29.240824: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+   | Name                               | Type                            | Params | Mode 
+------------------------------------------------------------------------------------------------
+0  | loss                               | QuantileLoss                    | 0      | train
+1  | logging_metrics                    | ModuleList                      | 0      | train
+2  | input_embeddings                   | MultiEmbedding                  | 24.6 K | train
+3  | prescalers                         | ModuleDict                      | 1.2 K  | train
+4  | static_variable_selection          | VariableSelectionNetwork        | 13.8 K | train
+5  | encoder_variable_selection         | VariableSelectionNetwork        | 126 K  | train
+6  | decoder_variable_selection         | VariableSelectionNetwork        | 48.0 K | train
+7  | static_context_variable_selection  | GatedResidualNetwork            | 16.8 K | train
+8  | static_context_initial_hidden_lstm | GatedResidualNetwork            | 16.8 K | train
+9  | static_context_initial_cell_lstm   | GatedResidualNetwork            | 16.8 K | train
+10 | static_context_enrichment          | GatedResidualNetwork            | 16.8 K | train
+11 | lstm_encoder                       | LSTM                            | 33.3 K | train
+12 | lstm_decoder                       | LSTM                            | 33.3 K | train
+13 | post_lstm_gate_encoder             | GatedLinearUnit                 | 8.3 K  | train
+14 | post_lstm_add_norm_encoder         | AddNorm                         | 128    | train
+15 | static_enrichment                  | GatedResidualNetwork            | 20.9 K | train
+16 | multihead_attn                     | InterpretableMultiHeadAttention | 9.1 K  | train
+17 | post_attn_gate_norm                | GateAddNorm                     | 8.4 K  | train
+18 | pos_wise_ff                        | GatedResidualNetwork            | 16.8 K | train
+19 | pre_output_gate_norm               | GateAddNorm                     | 8.4 K  | train
+20 | output_layer                       | Linear                          | 455    | train
+------------------------------------------------------------------------------------------------
+418 K     Trainable params
+0         Non-trainable params
+418 K     Total params
+1.673     Total estimated model params size (MB)
+794       Modules in train mode
+0         Modules in eval mode
+Metric val_loss improved. New best score: 12513.630
+Metric val_loss improved by 380.064 >= min_delta = 0.0001. New best score: 12133.565
+Metric val_loss improved by 240.828 >= min_delta = 0.0001. New best score: 11892.737
+Metric val_loss improved by 149.288 >= min_delta = 0.0001. New best score: 11743.449
+Metric val_loss improved by 113.444 >= min_delta = 0.0001. New best score: 11630.005
+Metric val_loss improved by 109.070 >= min_delta = 0.0001. New best score: 11520.935
+Metric val_loss improved by 87.596 >= min_delta = 0.0001. New best score: 11433.339
+Metric val_loss improved by 44.344 >= min_delta = 0.0001. New best score: 11388.995
+Metric val_loss improved by 54.619 >= min_delta = 0.0001. New best score: 11334.376
+Metric val_loss improved by 20.236 >= min_delta = 0.0001. New best score: 11314.140
+Metric val_loss improved by 37.525 >= min_delta = 0.0001. New best score: 11276.614
+Metric val_loss improved by 26.024 >= min_delta = 0.0001. New best score: 11250.590
+Metric val_loss improved by 14.618 >= min_delta = 0.0001. New best score: 11235.972
+Metric val_loss improved by 5.597 >= min_delta = 0.0001. New best score: 11230.375
+Metric val_loss improved by 26.825 >= min_delta = 0.0001. New best score: 11203.550
+Metric val_loss improved by 19.904 >= min_delta = 0.0001. New best score: 11183.646
+Metric val_loss improved by 0.273 >= min_delta = 0.0001. New best score: 11183.372
+Metric val_loss improved by 9.422 >= min_delta = 0.0001. New best score: 11173.950
+Metric val_loss improved by 31.352 >= min_delta = 0.0001. New best score: 11142.599
+Metric val_loss improved by 9.918 >= min_delta = 0.0001. New best score: 11132.681
+Metric val_loss improved by 14.879 >= min_delta = 0.0001. New best score: 11117.802
+Metric val_loss improved by 10.061 >= min_delta = 0.0001. New best score: 11107.741
+Metric val_loss improved by 0.396 >= min_delta = 0.0001. New best score: 11107.345
+Metric val_loss improved by 4.720 >= min_delta = 0.0001. New best score: 11102.625
+Metric val_loss improved by 14.043 >= min_delta = 0.0001. New best score: 11088.582
+Metric val_loss improved by 10.767 >= min_delta = 0.0001. New best score: 11077.815
+Metric val_loss improved by 1.508 >= min_delta = 0.0001. New best score: 11076.308
+Metric val_loss improved by 5.537 >= min_delta = 0.0001. New best score: 11070.771
+Metric val_loss improved by 5.157 >= min_delta = 0.0001. New best score: 11065.613
+Metric val_loss improved by 5.374 >= min_delta = 0.0001. New best score: 11060.239
+Metric val_loss improved by 4.320 >= min_delta = 0.0001. New best score: 11055.919
+Metric val_loss improved by 25.672 >= min_delta = 0.0001. New best score: 11030.247
+Metric val_loss improved by 14.197 >= min_delta = 0.0001. New best score: 11016.050
+Metric val_loss improved by 9.756 >= min_delta = 0.0001. New best score: 11006.294
+Metric val_loss improved by 2.643 >= min_delta = 0.0001. New best score: 11003.651
+Metric val_loss improved by 2.234 >= min_delta = 0.0001. New best score: 11001.417
+Metric val_loss improved by 1.518 >= min_delta = 0.0001. New best score: 10999.899
+Metric val_loss improved by 4.584 >= min_delta = 0.0001. New best score: 10995.315
+Metric val_loss improved by 16.061 >= min_delta = 0.0001. New best score: 10979.255
+Metric val_loss improved by 2.133 >= min_delta = 0.0001. New best score: 10977.122
+Metric val_loss improved by 4.062 >= min_delta = 0.0001. New best score: 10973.060
+Metric val_loss improved by 1.133 >= min_delta = 0.0001. New best score: 10971.927
+Metric val_loss improved by 3.859 >= min_delta = 0.0001. New best score: 10968.067
+Metric val_loss improved by 7.189 >= min_delta = 0.0001. New best score: 10960.878
+Metric val_loss improved by 11.045 >= min_delta = 0.0001. New best score: 10949.833
+Metric val_loss improved by 1.420 >= min_delta = 0.0001. New best score: 10948.413
+Metric val_loss improved by 4.878 >= min_delta = 0.0001. New best score: 10943.535
+Metric val_loss improved by 2.745 >= min_delta = 0.0001. New best score: 10940.790
+Metric val_loss improved by 4.186 >= min_delta = 0.0001. New best score: 10936.604
+Metric val_loss improved by 3.887 >= min_delta = 0.0001. New best score: 10932.718
+Metric val_loss improved by 4.621 >= min_delta = 0.0001. New best score: 10928.097
+Metric val_loss improved by 2.074 >= min_delta = 0.0001. New best score: 10926.022
+Metric val_loss improved by 0.549 >= min_delta = 0.0001. New best score: 10925.474
+Metric val_loss improved by 3.936 >= min_delta = 0.0001. New best score: 10921.538
+Metric val_loss improved by 7.251 >= min_delta = 0.0001. New best score: 10914.287
+Metric val_loss improved by 6.284 >= min_delta = 0.0001. New best score: 10908.003
+Metric val_loss improved by 8.707 >= min_delta = 0.0001. New best score: 10899.296
+Metric val_loss improved by 13.003 >= min_delta = 0.0001. New best score: 10886.293
+Metric val_loss improved by 0.437 >= min_delta = 0.0001. New best score: 10885.856
+Metric val_loss improved by 5.423 >= min_delta = 0.0001. New best score: 10880.434
+Metric val_loss improved by 4.416 >= min_delta = 0.0001. New best score: 10876.018
+Metric val_loss improved by 2.512 >= min_delta = 0.0001. New best score: 10873.506
+Metric val_loss improved by 8.276 >= min_delta = 0.0001. New best score: 10865.229
+Metric val_loss improved by 11.468 >= min_delta = 0.0001. New best score: 10853.762
+Metric val_loss improved by 2.083 >= min_delta = 0.0001. New best score: 10851.679
+Metric val_loss improved by 1.645 >= min_delta = 0.0001. New best score: 10850.034
+Metric val_loss improved by 0.146 >= min_delta = 0.0001. New best score: 10849.888
+Metric val_loss improved by 8.934 >= min_delta = 0.0001. New best score: 10840.954
+Metric val_loss improved by 3.968 >= min_delta = 0.0001. New best score: 10836.986
+Metric val_loss improved by 1.653 >= min_delta = 0.0001. New best score: 10835.333
+Metric val_loss improved by 3.258 >= min_delta = 0.0001. New best score: 10832.075
+Metric val_loss improved by 3.564 >= min_delta = 0.0001. New best score: 10828.511
+Metric val_loss improved by 4.325 >= min_delta = 0.0001. New best score: 10824.186
+Metric val_loss improved by 8.982 >= min_delta = 0.0001. New best score: 10815.203
+Metric val_loss improved by 0.327 >= min_delta = 0.0001. New best score: 10814.876
+Metric val_loss improved by 5.513 >= min_delta = 0.0001. New best score: 10809.363
+Metric val_loss improved by 1.251 >= min_delta = 0.0001. New best score: 10808.112
+Metric val_loss improved by 9.559 >= min_delta = 0.0001. New best score: 10798.554
+Metric val_loss improved by 3.302 >= min_delta = 0.0001. New best score: 10795.252
+Metric val_loss improved by 2.350 >= min_delta = 0.0001. New best score: 10792.902
+Metric val_loss improved by 5.709 >= min_delta = 0.0001. New best score: 10787.193
+Metric val_loss improved by 7.977 >= min_delta = 0.0001. New best score: 10779.217
+Metric val_loss improved by 7.752 >= min_delta = 0.0001. New best score: 10771.465
+Metric val_loss improved by 3.514 >= min_delta = 0.0001. New best score: 10767.951
