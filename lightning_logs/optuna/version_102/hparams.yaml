@@ -1,0 +1,4460 @@
+attention_head_size: 1
+categorical_groups: {}
+causal_attention: true
+dataset_parameters:
+  add_encoder_length: true
+  add_relative_time_idx: true
+  add_target_scales: true
+  allow_missing_timesteps: true
+  categorical_encoders:
+    __group_id__spot_id: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_:
+        '1.0': 0
+        '10.0': 1
+        '100.0': 2
+        '1004.0': 3
+        '1010.0': 4
+        '1015.0': 5
+        '1017.0': 6
+        '1027.0': 7
+        '103.0': 8
+        '1030.0': 9
+        '1038.0': 10
+        '1041.0': 11
+        '1046.0': 12
+        '1049.0': 13
+        '1052.0': 14
+        '1053.0': 15
+        '1059.0': 16
+        '1062.0': 17
+        '1071.0': 18
+        '1075.0': 19
+        '1077.0': 20
+        '1079.0': 21
+        '1084.0': 22
+        '1086.0': 23
+        '1099.0': 24
+        '1101.0': 25
+        '1116.0': 26
+        '1119.0': 27
+        '1123.0': 28
+        '1127.0': 29
+        '1131.0': 30
+        '116.0': 31
+        '1168.0': 32
+        '117.0': 33
+        '1176.0': 34
+        '118.0': 35
+        '1185.0': 36
+        '1186.0': 37
+        '12.0': 38
+        '120.0': 39
+        '1204.0': 40
+        '1206.0': 41
+        '1207.0': 42
+        '1211.0': 43
+        '1219.0': 44
+        '1226.0': 45
+        '1235.0': 46
+        '1237.0': 47
+        '1242.0': 48
+        '1244.0': 49
+        '1256.0': 50
+        '1260.0': 51
+        '1262.0': 52
+        '1274.0': 53
+        '1275.0': 54
+        '128.0': 55
+        '1282.0': 56
+        '1298.0': 57
+        '13.0': 58
+        '1315.0': 59
+        '1327.0': 60
+        '1336.0': 61
+        '1344.0': 62
+        '1353.0': 63
+        '1379.0': 64
+        '1381.0': 65
+        '1382.0': 66
+        '1385.0': 67
+        '1401.0': 68
+        '1402.0': 69
+        '1403.0': 70
+        '1407.0': 71
+        '1415.0': 72
+        '1425.0': 73
+        '1451.0': 74
+        '1452.0': 75
+        '1467.0': 76
+        '1494.0': 77
+        '1501.0': 78
+        '1505.0': 79
+        '1517.0': 80
+        '1549.0': 81
+        '1553.0': 82
+        '1567.0': 83
+        '1597.0': 84
+        '16.0': 85
+        '1602.0': 86
+        '1618.0': 87
+        '163.0': 88
+        '1654.0': 89
+        '1655.0': 90
+        '1665.0': 91
+        '1676.0': 92
+        '1689.0': 93
+        '1694.0': 94
+        '1695.0': 95
+        '1696.0': 96
+        '1701.0': 97
+        '1702.0': 98
+        '1705.0': 99
+        '1717.0': 100
+        '1719.0': 101
+        '1722.0': 102
+        '1736.0': 103
+        '1737.0': 104
+        '1738.0': 105
+        '1740.0': 106
+        '1749.0': 107
+        '1750.0': 108
+        '1761.0': 109
+        '1762.0': 110
+        '1767.0': 111
+        '1768.0': 112
+        '1771.0': 113
+        '1774.0': 114
+        '1782.0': 115
+        '1790.0': 116
+        '1792.0': 117
+        '1794.0': 118
+        '1800.0': 119
+        '1802.0': 120
+        '1803.0': 121
+        '1810.0': 122
+        '1811.0': 123
+        '1812.0': 124
+        '1813.0': 125
+        '1818.0': 126
+        '1819.0': 127
+        '1820.0': 128
+        '1821.0': 129
+        '1822.0': 130
+        '1825.0': 131
+        '1832.0': 132
+        '1837.0': 133
+        '1846.0': 134
+        '1858.0': 135
+        '1861.0': 136
+        '1865.0': 137
+        '1867.0': 138
+        '1871.0': 139
+        '1878.0': 140
+        '1879.0': 141
+        '1883.0': 142
+        '1892.0': 143
+        '1894.0': 144
+        '1895.0': 145
+        '1898.0': 146
+        '1899.0': 147
+        '1904.0': 148
+        '1905.0': 149
+        '1915.0': 150
+        '1927.0': 151
+        '1928.0': 152
+        '1931.0': 153
+        '1934.0': 154
+        '1936.0': 155
+        '1937.0': 156
+        '1938.0': 157
+        '1940.0': 158
+        '1944.0': 159
+        '1945.0': 160
+        '1956.0': 161
+        '1957.0': 162
+        '1961.0': 163
+        '1964.0': 164
+        '1969.0': 165
+        '1970.0': 166
+        '1971.0': 167
+        '1979.0': 168
+        '1982.0': 169
+        '1983.0': 170
+        '199.0': 171
+        '1990.0': 172
+        '1992.0': 173
+        '1994.0': 174
+        '1996.0': 175
+        '2003.0': 176
+        '2007.0': 177
+        '201.0': 178
+        '2017.0': 179
+        '2019.0': 180
+        '2020.0': 181
+        '2022.0': 182
+        '2027.0': 183
+        '2030.0': 184
+        '2035.0': 185
+        '2039.0': 186
+        '204.0': 187
+        '2042.0': 188
+        '2045.0': 189
+        '2049.0': 190
+        '2051.0': 191
+        '2060.0': 192
+        '207.0': 193
+        '2071.0': 194
+        '2073.0': 195
+        '2075.0': 196
+        '2084.0': 197
+        '2089.0': 198
+        '2092.0': 199
+        '2096.0': 200
+        '2099.0': 201
+        '210.0': 202
+        '2100.0': 203
+        '2103.0': 204
+        '2105.0': 205
+        '2106.0': 206
+        '2107.0': 207
+        '2110.0': 208
+        '2114.0': 209
+        '2120.0': 210
+        '2122.0': 211
+        '2123.0': 212
+        '2127.0': 213
+        '2130.0': 214
+        '2131.0': 215
+        '2132.0': 216
+        '2135.0': 217
+        '2137.0': 218
+        '2139.0': 219
+        '2140.0': 220
+        '2141.0': 221
+        '2142.0': 222
+        '2149.0': 223
+        '2150.0': 224
+        '2151.0': 225
+        '2152.0': 226
+        '2158.0': 227
+        '2160.0': 228
+        '2161.0': 229
+        '2163.0': 230
+        '2164.0': 231
+        '2165.0': 232
+        '2167.0': 233
+        '2173.0': 234
+        '2176.0': 235
+        '2177.0': 236
+        '2178.0': 237
+        '2188.0': 238
+        '2190.0': 239
+        '2193.0': 240
+        '2194.0': 241
+        '2197.0': 242
+        '2207.0': 243
+        '2208.0': 244
+        '221.0': 245
+        '2219.0': 246
+        '2221.0': 247
+        '2236.0': 248
+        '2252.0': 249
+        '2254.0': 250
+        '2259.0': 251
+        '2260.0': 252
+        '2264.0': 253
+        '2266.0': 254
+        '2269.0': 255
+        '2272.0': 256
+        '2273.0': 257
+        '2277.0': 258
+        '2278.0': 259
+        '2283.0': 260
+        '2289.0': 261
+        '229.0': 262
+        '2296.0': 263
+        '230.0': 264
+        '2301.0': 265
+        '2302.0': 266
+        '2303.0': 267
+        '2305.0': 268
+        '2308.0': 269
+        '2311.0': 270
+        '2312.0': 271
+        '2318.0': 272
+        '2320.0': 273
+        '2321.0': 274
+        '2322.0': 275
+        '2334.0': 276
+        '2340.0': 277
+        '2342.0': 278
+        '2350.0': 279
+        '2351.0': 280
+        '2352.0': 281
+        '2353.0': 282
+        '2360.0': 283
+        '2363.0': 284
+        '2372.0': 285
+        '2378.0': 286
+        '2380.0': 287
+        '2382.0': 288
+        '2388.0': 289
+        '2389.0': 290
+        '2390.0': 291
+        '2392.0': 292
+        '2393.0': 293
+        '2395.0': 294
+        '2397.0': 295
+        '2398.0': 296
+        '2399.0': 297
+        '2422.0': 298
+        '2426.0': 299
+        '2427.0': 300
+        '2433.0': 301
+        '2437.0': 302
+        '2455.0': 303
+        '254.0': 304
+        '292.0': 305
+        '315.0': 306
+        '324.0': 307
+        '3270.0': 308
+        '3271.0': 309
+        '328.0': 310
+        '33.0': 311
+        '3415.0': 312
+        '342.0': 313
+        '3454.0': 314
+        '353.0': 315
+        '3586.0': 316
+        '360.0': 317
+        '3616.0': 318
+        '3617.0': 319
+        '3621.0': 320
+        '3630.0': 321
+        '3631.0': 322
+        '3637.0': 323
+        '3638.0': 324
+        '3639.0': 325
+        '3642.0': 326
+        '3645.0': 327
+        '3650.0': 328
+        '3651.0': 329
+        '3660.0': 330
+        '3669.0': 331
+        '3701.0': 332
+        '3702.0': 333
+        '3703.0': 334
+        '3704.0': 335
+        '3714.0': 336
+        '3715.0': 337
+        '3732.0': 338
+        '3733.0': 339
+        '3742.0': 340
+        '3744.0': 341
+        '3762.0': 342
+        '3764.0': 343
+        '3804.0': 344
+        '39.0': 345
+        '417.0': 346
+        '419.0': 347
+        '443.0': 348
+        '465.0': 349
+        '467.0': 350
+        '482.0': 351
+        '484.0': 352
+        '489.0': 353
+        '491.0': 354
+        '495.0': 355
+        '497.0': 356
+        '498.0': 357
+        '504.0': 358
+        '536.0': 359
+        '546.0': 360
+        '547.0': 361
+        '551.0': 362
+        '557.0': 363
+        '559.0': 364
+        '565.0': 365
+        '570.0': 366
+        '579.0': 367
+        '584.0': 368
+        '592.0': 369
+        '60.0': 370
+        '601.0': 371
+        '61.0': 372
+        '617.0': 373
+        '62.0': 374
+        '634.0': 375
+        '636.0': 376
+        '66.0': 377
+        '666.0': 378
+        '667.0': 379
+        '671.0': 380
+        '681.0': 381
+        '689.0': 382
+        '694.0': 383
+        '695.0': 384
+        '696.0': 385
+        '7.0': 386
+        '709.0': 387
+        '728.0': 388
+        '73.0': 389
+        '736.0': 390
+        '742.0': 391
+        '743.0': 392
+        '759.0': 393
+        '777.0': 394
+        '79.0': 395
+        '793.0': 396
+        '795.0': 397
+        '797.0': 398
+        '8.0': 399
+        '81.0': 400
+        '813.0': 401
+        '82.0': 402
+        '831.0': 403
+        '837.0': 404
+        '84.0': 405
+        '844.0': 406
+        '845.0': 407
+        '847.0': 408
+        '857.0': 409
+        '865.0': 410
+        '879.0': 411
+        '88.0': 412
+        '888.0': 413
+        '9.0': 414
+        '901.0': 415
+        '915.0': 416
+        '926.0': 417
+        '93.0': 418
+        '945.0': 419
+        '954.0': 420
+        '982.0': 421
+        '984.0': 422
+        '986.0': 423
+        '992.0': 424
+        '994.0': 425
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - &id001 !!python/name:numpy.ndarray ''
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 426
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U6
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 24
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAAC4AAAAwAAAAAAAAAAAAAAAAAAAAMQAAADAAAAAuAAAAMAAAAAAAAAAAAAAAMQAAADAAAAAw
+          AAAALgAAADAAAAAAAAAAMQAAADAAAAAwAAAANAAAAC4AAAAwAAAAMQAAADAAAAAxAAAAMAAAAC4A
+          AAAwAAAAMQAAADAAAAAxAAAANQAAAC4AAAAwAAAAMQAAADAAAAAxAAAANwAAAC4AAAAwAAAAMQAA
+          ADAAAAAyAAAANwAAAC4AAAAwAAAAMQAAADAAAAAzAAAALgAAADAAAAAAAAAAMQAAADAAAAAzAAAA
+          MAAAAC4AAAAwAAAAMQAAADAAAAAzAAAAOAAAAC4AAAAwAAAAMQAAADAAAAA0AAAAMQAAAC4AAAAw
+          AAAAMQAAADAAAAA0AAAANgAAAC4AAAAwAAAAMQAAADAAAAA0AAAAOQAAAC4AAAAwAAAAMQAAADAA
+          AAA1AAAAMgAAAC4AAAAwAAAAMQAAADAAAAA1AAAAMwAAAC4AAAAwAAAAMQAAADAAAAA1AAAAOQAA
+          AC4AAAAwAAAAMQAAADAAAAA2AAAAMgAAAC4AAAAwAAAAMQAAADAAAAA3AAAAMQAAAC4AAAAwAAAA
+          MQAAADAAAAA3AAAANQAAAC4AAAAwAAAAMQAAADAAAAA3AAAANwAAAC4AAAAwAAAAMQAAADAAAAA3
+          AAAAOQAAAC4AAAAwAAAAMQAAADAAAAA4AAAANAAAAC4AAAAwAAAAMQAAADAAAAA4AAAANgAAAC4A
+          AAAwAAAAMQAAADAAAAA5AAAAOQAAAC4AAAAwAAAAMQAAADEAAAAwAAAAMQAAAC4AAAAwAAAAMQAA
+          ADEAAAAxAAAANgAAAC4AAAAwAAAAMQAAADEAAAAxAAAAOQAAAC4AAAAwAAAAMQAAADEAAAAyAAAA
+          MwAAAC4AAAAwAAAAMQAAADEAAAAyAAAANwAAAC4AAAAwAAAAMQAAADEAAAAzAAAAMQAAAC4AAAAw
+          AAAAMQAAADEAAAA2AAAALgAAADAAAAAAAAAAMQAAADEAAAA2AAAAOAAAAC4AAAAwAAAAMQAAADEA
+          AAA3AAAALgAAADAAAAAAAAAAMQAAADEAAAA3AAAANgAAAC4AAAAwAAAAMQAAADEAAAA4AAAALgAA
+          ADAAAAAAAAAAMQAAADEAAAA4AAAANQAAAC4AAAAwAAAAMQAAADEAAAA4AAAANgAAAC4AAAAwAAAA
+          MQAAADIAAAAuAAAAMAAAAAAAAAAAAAAAMQAAADIAAAAwAAAALgAAADAAAAAAAAAAMQAAADIAAAAw
+          AAAANAAAAC4AAAAwAAAAMQAAADIAAAAwAAAANgAAAC4AAAAwAAAAMQAAADIAAAAwAAAANwAAAC4A
+          AAAwAAAAMQAAADIAAAAxAAAAMQAAAC4AAAAwAAAAMQAAADIAAAAxAAAAOQAAAC4AAAAwAAAAMQAA
+          ADIAAAAyAAAANgAAAC4AAAAwAAAAMQAAADIAAAAzAAAANQAAAC4AAAAwAAAAMQAAADIAAAAzAAAA
+          NwAAAC4AAAAwAAAAMQAAADIAAAA0AAAAMgAAAC4AAAAwAAAAMQAAADIAAAA0AAAANAAAAC4AAAAw
+          AAAAMQAAADIAAAA1AAAANgAAAC4AAAAwAAAAMQAAADIAAAA2AAAAMAAAAC4AAAAwAAAAMQAAADIA
+          AAA2AAAAMgAAAC4AAAAwAAAAMQAAADIAAAA3AAAANAAAAC4AAAAwAAAAMQAAADIAAAA3AAAANQAA
+          AC4AAAAwAAAAMQAAADIAAAA4AAAALgAAADAAAAAAAAAAMQAAADIAAAA4AAAAMgAAAC4AAAAwAAAA
+          MQAAADIAAAA5AAAAOAAAAC4AAAAwAAAAMQAAADMAAAAuAAAAMAAAAAAAAAAAAAAAMQAAADMAAAAx
+          AAAANQAAAC4AAAAwAAAAMQAAADMAAAAyAAAANwAAAC4AAAAwAAAAMQAAADMAAAAzAAAANgAAAC4A
+          AAAwAAAAMQAAADMAAAA0AAAANAAAAC4AAAAwAAAAMQAAADMAAAA1AAAAMwAAAC4AAAAwAAAAMQAA
+          ADMAAAA3AAAAOQAAAC4AAAAwAAAAMQAAADMAAAA4AAAAMQAAAC4AAAAwAAAAMQAAADMAAAA4AAAA
+          MgAAAC4AAAAwAAAAMQAAADMAAAA4AAAANQAAAC4AAAAwAAAAMQAAADQAAAAwAAAAMQAAAC4AAAAw
+          AAAAMQAAADQAAAAwAAAAMgAAAC4AAAAwAAAAMQAAADQAAAAwAAAAMwAAAC4AAAAwAAAAMQAAADQA
+          AAAwAAAANwAAAC4AAAAwAAAAMQAAADQAAAAxAAAANQAAAC4AAAAwAAAAMQAAADQAAAAyAAAANQAA
+          AC4AAAAwAAAAMQAAADQAAAA1AAAAMQAAAC4AAAAwAAAAMQAAADQAAAA1AAAAMgAAAC4AAAAwAAAA
+          MQAAADQAAAA2AAAANwAAAC4AAAAwAAAAMQAAADQAAAA5AAAANAAAAC4AAAAwAAAAMQAAADUAAAAw
+          AAAAMQAAAC4AAAAwAAAAMQAAADUAAAAwAAAANQAAAC4AAAAwAAAAMQAAADUAAAAxAAAANwAAAC4A
+          AAAwAAAAMQAAADUAAAA0AAAAOQAAAC4AAAAwAAAAMQAAADUAAAA1AAAAMwAAAC4AAAAwAAAAMQAA
+          ADUAAAA2AAAANwAAAC4AAAAwAAAAMQAAADUAAAA5AAAANwAAAC4AAAAwAAAAMQAAADYAAAAuAAAA
+          MAAAAAAAAAAAAAAAMQAAADYAAAAwAAAAMgAAAC4AAAAwAAAAMQAAADYAAAAxAAAAOAAAAC4AAAAw
+          AAAAMQAAADYAAAAzAAAALgAAADAAAAAAAAAAMQAAADYAAAA1AAAANAAAAC4AAAAwAAAAMQAAADYA
+          AAA1AAAANQAAAC4AAAAwAAAAMQAAADYAAAA2AAAANQAAAC4AAAAwAAAAMQAAADYAAAA3AAAANgAA
+          AC4AAAAwAAAAMQAAADYAAAA4AAAAOQAAAC4AAAAwAAAAMQAAADYAAAA5AAAANAAAAC4AAAAwAAAA
+          MQAAADYAAAA5AAAANQAAAC4AAAAwAAAAMQAAADYAAAA5AAAANgAAAC4AAAAwAAAAMQAAADcAAAAw
+          AAAAMQAAAC4AAAAwAAAAMQAAADcAAAAwAAAAMgAAAC4AAAAwAAAAMQAAADcAAAAwAAAANQAAAC4A
+          AAAwAAAAMQAAADcAAAAxAAAANwAAAC4AAAAwAAAAMQAAADcAAAAxAAAAOQAAAC4AAAAwAAAAMQAA
+          ADcAAAAyAAAAMgAAAC4AAAAwAAAAMQAAADcAAAAzAAAANgAAAC4AAAAwAAAAMQAAADcAAAAzAAAA
+          NwAAAC4AAAAwAAAAMQAAADcAAAAzAAAAOAAAAC4AAAAwAAAAMQAAADcAAAA0AAAAMAAAAC4AAAAw
+          AAAAMQAAADcAAAA0AAAAOQAAAC4AAAAwAAAAMQAAADcAAAA1AAAAMAAAAC4AAAAwAAAAMQAAADcA
+          AAA2AAAAMQAAAC4AAAAwAAAAMQAAADcAAAA2AAAAMgAAAC4AAAAwAAAAMQAAADcAAAA2AAAANwAA
+          AC4AAAAwAAAAMQAAADcAAAA2AAAAOAAAAC4AAAAwAAAAMQAAADcAAAA3AAAAMQAAAC4AAAAwAAAA
+          MQAAADcAAAA3AAAANAAAAC4AAAAwAAAAMQAAADcAAAA4AAAAMgAAAC4AAAAwAAAAMQAAADcAAAA5
+          AAAAMAAAAC4AAAAwAAAAMQAAADcAAAA5AAAAMgAAAC4AAAAwAAAAMQAAADcAAAA5AAAANAAAAC4A
+          AAAwAAAAMQAAADgAAAAwAAAAMAAAAC4AAAAwAAAAMQAAADgAAAAwAAAAMgAAAC4AAAAwAAAAMQAA
+          ADgAAAAwAAAAMwAAAC4AAAAwAAAAMQAAADgAAAAxAAAAMAAAAC4AAAAwAAAAMQAAADgAAAAxAAAA
+          MQAAAC4AAAAwAAAAMQAAADgAAAAxAAAAMgAAAC4AAAAwAAAAMQAAADgAAAAxAAAAMwAAAC4AAAAw
+          AAAAMQAAADgAAAAxAAAAOAAAAC4AAAAwAAAAMQAAADgAAAAxAAAAOQAAAC4AAAAwAAAAMQAAADgA
+          AAAyAAAAMAAAAC4AAAAwAAAAMQAAADgAAAAyAAAAMQAAAC4AAAAwAAAAMQAAADgAAAAyAAAAMgAA
+          AC4AAAAwAAAAMQAAADgAAAAyAAAANQAAAC4AAAAwAAAAMQAAADgAAAAzAAAAMgAAAC4AAAAwAAAA
+          MQAAADgAAAAzAAAANwAAAC4AAAAwAAAAMQAAADgAAAA0AAAANgAAAC4AAAAwAAAAMQAAADgAAAA1
+          AAAAOAAAAC4AAAAwAAAAMQAAADgAAAA2AAAAMQAAAC4AAAAwAAAAMQAAADgAAAA2AAAANQAAAC4A
+          AAAwAAAAMQAAADgAAAA2AAAANwAAAC4AAAAwAAAAMQAAADgAAAA3AAAAMQAAAC4AAAAwAAAAMQAA
+          ADgAAAA3AAAAOAAAAC4AAAAwAAAAMQAAADgAAAA3AAAAOQAAAC4AAAAwAAAAMQAAADgAAAA4AAAA
+          MwAAAC4AAAAwAAAAMQAAADgAAAA5AAAAMgAAAC4AAAAwAAAAMQAAADgAAAA5AAAANAAAAC4AAAAw
+          AAAAMQAAADgAAAA5AAAANQAAAC4AAAAwAAAAMQAAADgAAAA5AAAAOAAAAC4AAAAwAAAAMQAAADgA
+          AAA5AAAAOQAAAC4AAAAwAAAAMQAAADkAAAAwAAAANAAAAC4AAAAwAAAAMQAAADkAAAAwAAAANQAA
+          AC4AAAAwAAAAMQAAADkAAAAxAAAANQAAAC4AAAAwAAAAMQAAADkAAAAyAAAANwAAAC4AAAAwAAAA
+          MQAAADkAAAAyAAAAOAAAAC4AAAAwAAAAMQAAADkAAAAzAAAAMQAAAC4AAAAwAAAAMQAAADkAAAAz
+          AAAANAAAAC4AAAAwAAAAMQAAADkAAAAzAAAANgAAAC4AAAAwAAAAMQAAADkAAAAzAAAANwAAAC4A
+          AAAwAAAAMQAAADkAAAAzAAAAOAAAAC4AAAAwAAAAMQAAADkAAAA0AAAAMAAAAC4AAAAwAAAAMQAA
+          ADkAAAA0AAAANAAAAC4AAAAwAAAAMQAAADkAAAA0AAAANQAAAC4AAAAwAAAAMQAAADkAAAA1AAAA
+          NgAAAC4AAAAwAAAAMQAAADkAAAA1AAAANwAAAC4AAAAwAAAAMQAAADkAAAA2AAAAMQAAAC4AAAAw
+          AAAAMQAAADkAAAA2AAAANAAAAC4AAAAwAAAAMQAAADkAAAA2AAAAOQAAAC4AAAAwAAAAMQAAADkA
+          AAA3AAAAMAAAAC4AAAAwAAAAMQAAADkAAAA3AAAAMQAAAC4AAAAwAAAAMQAAADkAAAA3AAAAOQAA
+          AC4AAAAwAAAAMQAAADkAAAA4AAAAMgAAAC4AAAAwAAAAMQAAADkAAAA4AAAAMwAAAC4AAAAwAAAA
+          MQAAADkAAAA5AAAALgAAADAAAAAAAAAAMQAAADkAAAA5AAAAMAAAAC4AAAAwAAAAMQAAADkAAAA5
+          AAAAMgAAAC4AAAAwAAAAMQAAADkAAAA5AAAANAAAAC4AAAAwAAAAMQAAADkAAAA5AAAANgAAAC4A
+          AAAwAAAAMgAAADAAAAAwAAAAMwAAAC4AAAAwAAAAMgAAADAAAAAwAAAANwAAAC4AAAAwAAAAMgAA
+          ADAAAAAxAAAALgAAADAAAAAAAAAAMgAAADAAAAAxAAAANwAAAC4AAAAwAAAAMgAAADAAAAAxAAAA
+          OQAAAC4AAAAwAAAAMgAAADAAAAAyAAAAMAAAAC4AAAAwAAAAMgAAADAAAAAyAAAAMgAAAC4AAAAw
+          AAAAMgAAADAAAAAyAAAANwAAAC4AAAAwAAAAMgAAADAAAAAzAAAAMAAAAC4AAAAwAAAAMgAAADAA
+          AAAzAAAANQAAAC4AAAAwAAAAMgAAADAAAAAzAAAAOQAAAC4AAAAwAAAAMgAAADAAAAA0AAAALgAA
+          ADAAAAAAAAAAMgAAADAAAAA0AAAAMgAAAC4AAAAwAAAAMgAAADAAAAA0AAAANQAAAC4AAAAwAAAA
+          MgAAADAAAAA0AAAAOQAAAC4AAAAwAAAAMgAAADAAAAA1AAAAMQAAAC4AAAAwAAAAMgAAADAAAAA2
+          AAAAMAAAAC4AAAAwAAAAMgAAADAAAAA3AAAALgAAADAAAAAAAAAAMgAAADAAAAA3AAAAMQAAAC4A
+          AAAwAAAAMgAAADAAAAA3AAAAMwAAAC4AAAAwAAAAMgAAADAAAAA3AAAANQAAAC4AAAAwAAAAMgAA
+          ADAAAAA4AAAANAAAAC4AAAAwAAAAMgAAADAAAAA4AAAAOQAAAC4AAAAwAAAAMgAAADAAAAA5AAAA
+          MgAAAC4AAAAwAAAAMgAAADAAAAA5AAAANgAAAC4AAAAwAAAAMgAAADAAAAA5AAAAOQAAAC4AAAAw
+          AAAAMgAAADEAAAAwAAAALgAAADAAAAAAAAAAMgAAADEAAAAwAAAAMAAAAC4AAAAwAAAAMgAAADEA
+          AAAwAAAAMwAAAC4AAAAwAAAAMgAAADEAAAAwAAAANQAAAC4AAAAwAAAAMgAAADEAAAAwAAAANgAA
+          AC4AAAAwAAAAMgAAADEAAAAwAAAANwAAAC4AAAAwAAAAMgAAADEAAAAxAAAAMAAAAC4AAAAwAAAA
+          MgAAADEAAAAxAAAANAAAAC4AAAAwAAAAMgAAADEAAAAyAAAAMAAAAC4AAAAwAAAAMgAAADEAAAAy
+          AAAAMgAAAC4AAAAwAAAAMgAAADEAAAAyAAAAMwAAAC4AAAAwAAAAMgAAADEAAAAyAAAANwAAAC4A
+          AAAwAAAAMgAAADEAAAAzAAAAMAAAAC4AAAAwAAAAMgAAADEAAAAzAAAAMQAAAC4AAAAwAAAAMgAA
+          ADEAAAAzAAAAMgAAAC4AAAAwAAAAMgAAADEAAAAzAAAANQAAAC4AAAAwAAAAMgAAADEAAAAzAAAA
+          NwAAAC4AAAAwAAAAMgAAADEAAAAzAAAAOQAAAC4AAAAwAAAAMgAAADEAAAA0AAAAMAAAAC4AAAAw
+          AAAAMgAAADEAAAA0AAAAMQAAAC4AAAAwAAAAMgAAADEAAAA0AAAAMgAAAC4AAAAwAAAAMgAAADEA
+          AAA0AAAAOQAAAC4AAAAwAAAAMgAAADEAAAA1AAAAMAAAAC4AAAAwAAAAMgAAADEAAAA1AAAAMQAA
+          AC4AAAAwAAAAMgAAADEAAAA1AAAAMgAAAC4AAAAwAAAAMgAAADEAAAA1AAAAOAAAAC4AAAAwAAAA
+          MgAAADEAAAA2AAAAMAAAAC4AAAAwAAAAMgAAADEAAAA2AAAAMQAAAC4AAAAwAAAAMgAAADEAAAA2
+          AAAAMwAAAC4AAAAwAAAAMgAAADEAAAA2AAAANAAAAC4AAAAwAAAAMgAAADEAAAA2AAAANQAAAC4A
+          AAAwAAAAMgAAADEAAAA2AAAANwAAAC4AAAAwAAAAMgAAADEAAAA3AAAAMwAAAC4AAAAwAAAAMgAA
+          ADEAAAA3AAAANgAAAC4AAAAwAAAAMgAAADEAAAA3AAAANwAAAC4AAAAwAAAAMgAAADEAAAA3AAAA
+          OAAAAC4AAAAwAAAAMgAAADEAAAA4AAAAOAAAAC4AAAAwAAAAMgAAADEAAAA5AAAAMAAAAC4AAAAw
+          AAAAMgAAADEAAAA5AAAAMwAAAC4AAAAwAAAAMgAAADEAAAA5AAAANAAAAC4AAAAwAAAAMgAAADEA
+          AAA5AAAANwAAAC4AAAAwAAAAMgAAADIAAAAwAAAANwAAAC4AAAAwAAAAMgAAADIAAAAwAAAAOAAA
+          AC4AAAAwAAAAMgAAADIAAAAxAAAALgAAADAAAAAAAAAAMgAAADIAAAAxAAAAOQAAAC4AAAAwAAAA
+          MgAAADIAAAAyAAAAMQAAAC4AAAAwAAAAMgAAADIAAAAzAAAANgAAAC4AAAAwAAAAMgAAADIAAAA1
+          AAAAMgAAAC4AAAAwAAAAMgAAADIAAAA1AAAANAAAAC4AAAAwAAAAMgAAADIAAAA1AAAAOQAAAC4A
+          AAAwAAAAMgAAADIAAAA2AAAAMAAAAC4AAAAwAAAAMgAAADIAAAA2AAAANAAAAC4AAAAwAAAAMgAA
+          ADIAAAA2AAAANgAAAC4AAAAwAAAAMgAAADIAAAA2AAAAOQAAAC4AAAAwAAAAMgAAADIAAAA3AAAA
+          MgAAAC4AAAAwAAAAMgAAADIAAAA3AAAAMwAAAC4AAAAwAAAAMgAAADIAAAA3AAAANwAAAC4AAAAw
+          AAAAMgAAADIAAAA3AAAAOAAAAC4AAAAwAAAAMgAAADIAAAA4AAAAMwAAAC4AAAAwAAAAMgAAADIA
+          AAA4AAAAOQAAAC4AAAAwAAAAMgAAADIAAAA5AAAALgAAADAAAAAAAAAAMgAAADIAAAA5AAAANgAA
+          AC4AAAAwAAAAMgAAADMAAAAwAAAALgAAADAAAAAAAAAAMgAAADMAAAAwAAAAMQAAAC4AAAAwAAAA
+          MgAAADMAAAAwAAAAMgAAAC4AAAAwAAAAMgAAADMAAAAwAAAAMwAAAC4AAAAwAAAAMgAAADMAAAAw
+          AAAANQAAAC4AAAAwAAAAMgAAADMAAAAwAAAAOAAAAC4AAAAwAAAAMgAAADMAAAAxAAAAMQAAAC4A
+          AAAwAAAAMgAAADMAAAAxAAAAMgAAAC4AAAAwAAAAMgAAADMAAAAxAAAAOAAAAC4AAAAwAAAAMgAA
+          ADMAAAAyAAAAMAAAAC4AAAAwAAAAMgAAADMAAAAyAAAAMQAAAC4AAAAwAAAAMgAAADMAAAAyAAAA
+          MgAAAC4AAAAwAAAAMgAAADMAAAAzAAAANAAAAC4AAAAwAAAAMgAAADMAAAA0AAAAMAAAAC4AAAAw
+          AAAAMgAAADMAAAA0AAAAMgAAAC4AAAAwAAAAMgAAADMAAAA1AAAAMAAAAC4AAAAwAAAAMgAAADMA
+          AAA1AAAAMQAAAC4AAAAwAAAAMgAAADMAAAA1AAAAMgAAAC4AAAAwAAAAMgAAADMAAAA1AAAAMwAA
+          AC4AAAAwAAAAMgAAADMAAAA2AAAAMAAAAC4AAAAwAAAAMgAAADMAAAA2AAAAMwAAAC4AAAAwAAAA
+          MgAAADMAAAA3AAAAMgAAAC4AAAAwAAAAMgAAADMAAAA3AAAAOAAAAC4AAAAwAAAAMgAAADMAAAA4
+          AAAAMAAAAC4AAAAwAAAAMgAAADMAAAA4AAAAMgAAAC4AAAAwAAAAMgAAADMAAAA4AAAAOAAAAC4A
+          AAAwAAAAMgAAADMAAAA4AAAAOQAAAC4AAAAwAAAAMgAAADMAAAA5AAAAMAAAAC4AAAAwAAAAMgAA
+          ADMAAAA5AAAAMgAAAC4AAAAwAAAAMgAAADMAAAA5AAAAMwAAAC4AAAAwAAAAMgAAADMAAAA5AAAA
+          NQAAAC4AAAAwAAAAMgAAADMAAAA5AAAANwAAAC4AAAAwAAAAMgAAADMAAAA5AAAAOAAAAC4AAAAw
+          AAAAMgAAADMAAAA5AAAAOQAAAC4AAAAwAAAAMgAAADQAAAAyAAAAMgAAAC4AAAAwAAAAMgAAADQA
+          AAAyAAAANgAAAC4AAAAwAAAAMgAAADQAAAAyAAAANwAAAC4AAAAwAAAAMgAAADQAAAAzAAAAMwAA
+          AC4AAAAwAAAAMgAAADQAAAAzAAAANwAAAC4AAAAwAAAAMgAAADQAAAA1AAAANQAAAC4AAAAwAAAA
+          MgAAADUAAAA0AAAALgAAADAAAAAAAAAAMgAAADkAAAAyAAAALgAAADAAAAAAAAAAMwAAADEAAAA1
+          AAAALgAAADAAAAAAAAAAMwAAADIAAAA0AAAALgAAADAAAAAAAAAAMwAAADIAAAA3AAAAMAAAAC4A
+          AAAwAAAAMwAAADIAAAA3AAAAMQAAAC4AAAAwAAAAMwAAADIAAAA4AAAALgAAADAAAAAAAAAAMwAA
+          ADMAAAAuAAAAMAAAAAAAAAAAAAAAMwAAADQAAAAxAAAANQAAAC4AAAAwAAAAMwAAADQAAAAyAAAA
+          LgAAADAAAAAAAAAAMwAAADQAAAA1AAAANAAAAC4AAAAwAAAAMwAAADUAAAAzAAAALgAAADAAAAAA
+          AAAAMwAAADUAAAA4AAAANgAAAC4AAAAwAAAAMwAAADYAAAAwAAAALgAAADAAAAAAAAAAMwAAADYA
+          AAAxAAAANgAAAC4AAAAwAAAAMwAAADYAAAAxAAAANwAAAC4AAAAwAAAAMwAAADYAAAAyAAAAMQAA
+          AC4AAAAwAAAAMwAAADYAAAAzAAAAMAAAAC4AAAAwAAAAMwAAADYAAAAzAAAAMQAAAC4AAAAwAAAA
+          MwAAADYAAAAzAAAANwAAAC4AAAAwAAAAMwAAADYAAAAzAAAAOAAAAC4AAAAwAAAAMwAAADYAAAAz
+          AAAAOQAAAC4AAAAwAAAAMwAAADYAAAA0AAAAMgAAAC4AAAAwAAAAMwAAADYAAAA0AAAANQAAAC4A
+          AAAwAAAAMwAAADYAAAA1AAAAMAAAAC4AAAAwAAAAMwAAADYAAAA1AAAAMQAAAC4AAAAwAAAAMwAA
+          ADYAAAA2AAAAMAAAAC4AAAAwAAAAMwAAADYAAAA2AAAAOQAAAC4AAAAwAAAAMwAAADcAAAAwAAAA
+          MQAAAC4AAAAwAAAAMwAAADcAAAAwAAAAMgAAAC4AAAAwAAAAMwAAADcAAAAwAAAAMwAAAC4AAAAw
+          AAAAMwAAADcAAAAwAAAANAAAAC4AAAAwAAAAMwAAADcAAAAxAAAANAAAAC4AAAAwAAAAMwAAADcA
+          AAAxAAAANQAAAC4AAAAwAAAAMwAAADcAAAAzAAAAMgAAAC4AAAAwAAAAMwAAADcAAAAzAAAAMwAA
+          AC4AAAAwAAAAMwAAADcAAAA0AAAAMgAAAC4AAAAwAAAAMwAAADcAAAA0AAAANAAAAC4AAAAwAAAA
+          MwAAADcAAAA2AAAAMgAAAC4AAAAwAAAAMwAAADcAAAA2AAAANAAAAC4AAAAwAAAAMwAAADgAAAAw
+          AAAANAAAAC4AAAAwAAAAMwAAADkAAAAuAAAAMAAAAAAAAAAAAAAANAAAADEAAAA3AAAALgAAADAA
+          AAAAAAAANAAAADEAAAA5AAAALgAAADAAAAAAAAAANAAAADQAAAAzAAAALgAAADAAAAAAAAAANAAA
+          ADYAAAA1AAAALgAAADAAAAAAAAAANAAAADYAAAA3AAAALgAAADAAAAAAAAAANAAAADgAAAAyAAAA
+          LgAAADAAAAAAAAAANAAAADgAAAA0AAAALgAAADAAAAAAAAAANAAAADgAAAA5AAAALgAAADAAAAAA
+          AAAANAAAADkAAAAxAAAALgAAADAAAAAAAAAANAAAADkAAAA1AAAALgAAADAAAAAAAAAANAAAADkA
+          AAA3AAAALgAAADAAAAAAAAAANAAAADkAAAA4AAAALgAAADAAAAAAAAAANQAAADAAAAA0AAAALgAA
+          ADAAAAAAAAAANQAAADMAAAA2AAAALgAAADAAAAAAAAAANQAAADQAAAA2AAAALgAAADAAAAAAAAAA
+          NQAAADQAAAA3AAAALgAAADAAAAAAAAAANQAAADUAAAAxAAAALgAAADAAAAAAAAAANQAAADUAAAA3
+          AAAALgAAADAAAAAAAAAANQAAADUAAAA5AAAALgAAADAAAAAAAAAANQAAADYAAAA1AAAALgAAADAA
+          AAAAAAAANQAAADcAAAAwAAAALgAAADAAAAAAAAAANQAAADcAAAA5AAAALgAAADAAAAAAAAAANQAA
+          ADgAAAA0AAAALgAAADAAAAAAAAAANQAAADkAAAAyAAAALgAAADAAAAAAAAAANgAAADAAAAAuAAAA
+          MAAAAAAAAAAAAAAANgAAADAAAAAxAAAALgAAADAAAAAAAAAANgAAADEAAAAuAAAAMAAAAAAAAAAA
+          AAAANgAAADEAAAA3AAAALgAAADAAAAAAAAAANgAAADIAAAAuAAAAMAAAAAAAAAAAAAAANgAAADMA
+          AAA0AAAALgAAADAAAAAAAAAANgAAADMAAAA2AAAALgAAADAAAAAAAAAANgAAADYAAAAuAAAAMAAA
+          AAAAAAAAAAAANgAAADYAAAA2AAAALgAAADAAAAAAAAAANgAAADYAAAA3AAAALgAAADAAAAAAAAAA
+          NgAAADcAAAAxAAAALgAAADAAAAAAAAAANgAAADgAAAAxAAAALgAAADAAAAAAAAAANgAAADgAAAA5
+          AAAALgAAADAAAAAAAAAANgAAADkAAAA0AAAALgAAADAAAAAAAAAANgAAADkAAAA1AAAALgAAADAA
+          AAAAAAAANgAAADkAAAA2AAAALgAAADAAAAAAAAAANwAAAC4AAAAwAAAAAAAAAAAAAAAAAAAANwAA
+          ADAAAAA5AAAALgAAADAAAAAAAAAANwAAADIAAAA4AAAALgAAADAAAAAAAAAANwAAADMAAAAuAAAA
+          MAAAAAAAAAAAAAAANwAAADMAAAA2AAAALgAAADAAAAAAAAAANwAAADQAAAAyAAAALgAAADAAAAAA
+          AAAANwAAADQAAAAzAAAALgAAADAAAAAAAAAANwAAADUAAAA5AAAALgAAADAAAAAAAAAANwAAADcA
+          AAA3AAAALgAAADAAAAAAAAAANwAAADkAAAAuAAAAMAAAAAAAAAAAAAAANwAAADkAAAAzAAAALgAA
+          ADAAAAAAAAAANwAAADkAAAA1AAAALgAAADAAAAAAAAAANwAAADkAAAA3AAAALgAAADAAAAAAAAAA
+          OAAAAC4AAAAwAAAAAAAAAAAAAAAAAAAAOAAAADEAAAAuAAAAMAAAAAAAAAAAAAAAOAAAADEAAAAz
+          AAAALgAAADAAAAAAAAAAOAAAADIAAAAuAAAAMAAAAAAAAAAAAAAAOAAAADMAAAAxAAAALgAAADAA
+          AAAAAAAAOAAAADMAAAA3AAAALgAAADAAAAAAAAAAOAAAADQAAAAuAAAAMAAAAAAAAAAAAAAAOAAA
+          ADQAAAA0AAAALgAAADAAAAAAAAAAOAAAADQAAAA1AAAALgAAADAAAAAAAAAAOAAAADQAAAA3AAAA
+          LgAAADAAAAAAAAAAOAAAADUAAAA3AAAALgAAADAAAAAAAAAAOAAAADYAAAA1AAAALgAAADAAAAAA
+          AAAAOAAAADcAAAA5AAAALgAAADAAAAAAAAAAOAAAADgAAAAuAAAAMAAAAAAAAAAAAAAAOAAAADgA
+          AAA4AAAALgAAADAAAAAAAAAAOQAAAC4AAAAwAAAAAAAAAAAAAAAAAAAAOQAAADAAAAAxAAAALgAA
+          ADAAAAAAAAAAOQAAADEAAAA1AAAALgAAADAAAAAAAAAAOQAAADIAAAA2AAAALgAAADAAAAAAAAAA
+          OQAAADMAAAAuAAAAMAAAAAAAAAAAAAAAOQAAADQAAAA1AAAALgAAADAAAAAAAAAAOQAAADUAAAA0
+          AAAALgAAADAAAAAAAAAAOQAAADgAAAAyAAAALgAAADAAAAAAAAAAOQAAADgAAAA0AAAALgAAADAA
+          AAAAAAAAOQAAADgAAAA2AAAALgAAADAAAAAAAAAAOQAAADkAAAAyAAAALgAAADAAAAAAAAAAOQAA
+          ADkAAAA0AAAALgAAADAAAAAAAAAA
+      warn: true
+    __group_id__vehicle_type: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_:
+        Compact: 0
+        Compact HEV: 1
+        Compact SUV: 2
+        Electric: 3
+        Fullsize SUV: 4
+        Imported: 5
+        Micro SUV: 6
+        Microcar: 7
+        Midsize: 8
+        Midsize HEV: 9
+        Midsize SUV: 10
+        Passenger Van: 11
+        Subcompact: 12
+        Subcompact SUV: 13
+        Subcompact SUV HEV: 14
+        Upper Midsize: 15
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 16
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U18
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 72
+          - 4
+          - 8
+        - false
+        - !!binary |
+          QwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAQwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAAACAAAABIAAAARQAAAFYA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAA
+          ACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARQAAAGwAAABlAAAA
+          YwAAAHQAAAByAAAAaQAAAGMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAARgAAAHUAAABsAAAAbAAAAHMAAABpAAAAegAAAGUAAAAgAAAAUwAAAFUAAABWAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAASQAAAG0AAABwAAAAbwAAAHIAAAB0AAAAZQAAAGQAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABjAAAAcgAAAG8AAAAgAAAA
+          UwAAAFUAAABWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABj
+          AAAAcgAAAG8AAABjAAAAYQAAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6AAAAZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6AAAAZQAAACAAAABIAAAA
+          RQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6
+          AAAAZQAAACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAGEA
+          AABzAAAAcwAAAGUAAABuAAAAZwAAAGUAAAByAAAAIAAAAFYAAABhAAAAbgAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAUwAAAHUAAABiAAAAYwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUwAAAHUAAABiAAAAYwAAAG8AAABtAAAAcAAAAGEAAABj
+          AAAAdAAAACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAUwAAAHUAAABiAAAAYwAAAG8A
+          AABtAAAAcAAAAGEAAABjAAAAdAAAACAAAABTAAAAVQAAAFYAAAAgAAAASAAAAEUAAABWAAAAVQAA
+          AHAAAABwAAAAZQAAAHIAAAAgAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6AAAAZQAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAA
+      warn: true
+    dow: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id006
+        '0': 0
+        '1': 1
+        '2': 2
+        '3': 3
+        '4': 4
+        '5': 5
+        '6': 6
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 7
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U1
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 4
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MAAAADEAAAAyAAAAMwAAADQAAAA1AAAANgAAAA==
+      warn: true
+    is_holiday: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id007
+        'False': 0
+        'True': 1
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 2
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U5
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 20
+          - 4
+          - 8
+        - false
+        - !!binary |
+          RgAAAGEAAABsAAAAcwAAAGUAAABUAAAAcgAAAHUAAABlAAAAAAAAAA==
+      warn: true
+    is_weekend: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id008
+        '0': 0
+        '1': 1
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 2
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U1
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 4
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MAAAADEAAAA=
+      warn: true
+    month: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id009
+        '1': 0
+        '10': 1
+        '11': 2
+        '12': 3
+        '2': 4
+        '3': 5
+        '4': 6
+        '5': 7
+        '6': 8
+        '7': 9
+        '8': 10
+        '9': 11
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 12
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U2
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 8
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAAAAAAAAxAAAAMAAAADEAAAAxAAAAMQAAADIAAAAyAAAAAAAAADMAAAAAAAAANAAAAAAAAAA1
+          AAAAAAAAADYAAAAAAAAANwAAAAAAAAA4AAAAAAAAADkAAAAAAAAA
+      warn: true
+    quarter: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id010
+        '1': 0
+        '2': 1
+        '3': 2
+        '4': 3
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 4
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U1
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 4
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAADIAAAAzAAAANAAAAA==
+      warn: true
+    region_code: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id011
+        '108': 0
+        '112': 1
+        '119': 2
+        '131': 3
+        '133': 4
+        '143': 5
+        '146': 6
+        '152': 7
+        '156': 8
+        '159': 9
+        '239': 10
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 11
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U3
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 12
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAADAAAAA4AAAAMQAAADEAAAAyAAAAMQAAADEAAAA5AAAAMQAAADMAAAAxAAAAMQAAADMAAAAz
+          AAAAMQAAADQAAAAzAAAAMQAAADQAAAA2AAAAMQAAADUAAAAyAAAAMQAAADUAAAA2AAAAMQAAADUA
+          AAA5AAAAMgAAADMAAAA5AAAA
+      warn: true
+    spot_id: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: true
+      classes_: &id012
+        '1.0': 1
+        '10.0': 2
+        '100.0': 3
+        '1004.0': 4
+        '1010.0': 5
+        '1015.0': 6
+        '1017.0': 7
+        '1027.0': 8
+        '103.0': 9
+        '1030.0': 10
+        '1038.0': 11
+        '1041.0': 12
+        '1046.0': 13
+        '1049.0': 14
+        '1052.0': 15
+        '1053.0': 16
+        '1059.0': 17
+        '1062.0': 18
+        '1071.0': 19
+        '1075.0': 20
+        '1077.0': 21
+        '1079.0': 22
+        '1084.0': 23
+        '1086.0': 24
+        '1099.0': 25
+        '1101.0': 26
+        '1116.0': 27
+        '1119.0': 28
+        '1123.0': 29
+        '1127.0': 30
+        '1131.0': 31
+        '116.0': 32
+        '1168.0': 33
+        '117.0': 34
+        '1176.0': 35
+        '118.0': 36
+        '1185.0': 37
+        '1186.0': 38
+        '12.0': 39
+        '120.0': 40
+        '1204.0': 41
+        '1206.0': 42
+        '1207.0': 43
+        '1211.0': 44
+        '1219.0': 45
+        '1226.0': 46
+        '1235.0': 47
+        '1237.0': 48
+        '1242.0': 49
+        '1244.0': 50
+        '1256.0': 51
+        '1260.0': 52
+        '1262.0': 53
+        '1274.0': 54
+        '1275.0': 55
+        '128.0': 56
+        '1282.0': 57
+        '1298.0': 58
+        '13.0': 59
+        '1315.0': 60
+        '1327.0': 61
+        '1336.0': 62
+        '1344.0': 63
+        '1353.0': 64
+        '1379.0': 65
+        '1381.0': 66
+        '1382.0': 67
+        '1385.0': 68
+        '1401.0': 69
+        '1402.0': 70
+        '1403.0': 71
+        '1407.0': 72
+        '1415.0': 73
+        '1425.0': 74
+        '1451.0': 75
+        '1452.0': 76
+        '1467.0': 77
+        '1494.0': 78
+        '1501.0': 79
+        '1505.0': 80
+        '1517.0': 81
+        '1549.0': 82
+        '1553.0': 83
+        '1567.0': 84
+        '1597.0': 85
+        '16.0': 86
+        '1602.0': 87
+        '1618.0': 88
+        '163.0': 89
+        '1654.0': 90
+        '1655.0': 91
+        '1665.0': 92
+        '1676.0': 93
+        '1689.0': 94
+        '1694.0': 95
+        '1695.0': 96
+        '1696.0': 97
+        '1701.0': 98
+        '1702.0': 99
+        '1705.0': 100
+        '1717.0': 101
+        '1719.0': 102
+        '1722.0': 103
+        '1736.0': 104
+        '1737.0': 105
+        '1738.0': 106
+        '1740.0': 107
+        '1749.0': 108
+        '1750.0': 109
+        '1761.0': 110
+        '1762.0': 111
+        '1767.0': 112
+        '1768.0': 113
+        '1771.0': 114
+        '1774.0': 115
+        '1782.0': 116
+        '1790.0': 117
+        '1792.0': 118
+        '1794.0': 119
+        '1800.0': 120
+        '1802.0': 121
+        '1803.0': 122
+        '1810.0': 123
+        '1811.0': 124
+        '1812.0': 125
+        '1813.0': 126
+        '1818.0': 127
+        '1819.0': 128
+        '1820.0': 129
+        '1821.0': 130
+        '1822.0': 131
+        '1825.0': 132
+        '1832.0': 133
+        '1837.0': 134
+        '1846.0': 135
+        '1858.0': 136
+        '1861.0': 137
+        '1865.0': 138
+        '1867.0': 139
+        '1871.0': 140
+        '1878.0': 141
+        '1879.0': 142
+        '1883.0': 143
+        '1892.0': 144
+        '1894.0': 145
+        '1895.0': 146
+        '1898.0': 147
+        '1899.0': 148
+        '1904.0': 149
+        '1905.0': 150
+        '1915.0': 151
+        '1927.0': 152
+        '1928.0': 153
+        '1931.0': 154
+        '1934.0': 155
+        '1936.0': 156
+        '1937.0': 157
+        '1938.0': 158
+        '1940.0': 159
+        '1944.0': 160
+        '1945.0': 161
+        '1956.0': 162
+        '1957.0': 163
+        '1961.0': 164
+        '1964.0': 165
+        '1969.0': 166
+        '1970.0': 167
+        '1971.0': 168
+        '1979.0': 169
+        '1982.0': 170
+        '1983.0': 171
+        '199.0': 172
+        '1990.0': 173
+        '1992.0': 174
+        '1994.0': 175
+        '1996.0': 176
+        '2003.0': 177
+        '2007.0': 178
+        '201.0': 179
+        '2017.0': 180
+        '2019.0': 181
+        '2020.0': 182
+        '2022.0': 183
+        '2027.0': 184
+        '2030.0': 185
+        '2035.0': 186
+        '2039.0': 187
+        '204.0': 188
+        '2042.0': 189
+        '2045.0': 190
+        '2049.0': 191
+        '2051.0': 192
+        '2060.0': 193
+        '207.0': 194
+        '2071.0': 195
+        '2073.0': 196
+        '2075.0': 197
+        '2084.0': 198
+        '2089.0': 199
+        '2092.0': 200
+        '2096.0': 201
+        '2099.0': 202
+        '210.0': 203
+        '2100.0': 204
+        '2103.0': 205
+        '2105.0': 206
+        '2106.0': 207
+        '2107.0': 208
+        '2110.0': 209
+        '2114.0': 210
+        '2120.0': 211
+        '2122.0': 212
+        '2123.0': 213
+        '2127.0': 214
+        '2130.0': 215
+        '2131.0': 216
+        '2132.0': 217
+        '2135.0': 218
+        '2137.0': 219
+        '2139.0': 220
+        '2140.0': 221
+        '2141.0': 222
+        '2142.0': 223
+        '2149.0': 224
+        '2150.0': 225
+        '2151.0': 226
+        '2152.0': 227
+        '2158.0': 228
+        '2160.0': 229
+        '2161.0': 230
+        '2163.0': 231
+        '2164.0': 232
+        '2165.0': 233
+        '2167.0': 234
+        '2173.0': 235
+        '2176.0': 236
+        '2177.0': 237
+        '2178.0': 238
+        '2188.0': 239
+        '2190.0': 240
+        '2193.0': 241
+        '2194.0': 242
+        '2197.0': 243
+        '2207.0': 244
+        '2208.0': 245
+        '221.0': 246
+        '2219.0': 247
+        '2221.0': 248
+        '2236.0': 249
+        '2252.0': 250
+        '2254.0': 251
+        '2259.0': 252
+        '2260.0': 253
+        '2264.0': 254
+        '2266.0': 255
+        '2269.0': 256
+        '2272.0': 257
+        '2273.0': 258
+        '2277.0': 259
+        '2278.0': 260
+        '2283.0': 261
+        '2289.0': 262
+        '229.0': 263
+        '2296.0': 264
+        '230.0': 265
+        '2301.0': 266
+        '2302.0': 267
+        '2303.0': 268
+        '2305.0': 269
+        '2308.0': 270
+        '2311.0': 271
+        '2312.0': 272
+        '2318.0': 273
+        '2320.0': 274
+        '2321.0': 275
+        '2322.0': 276
+        '2334.0': 277
+        '2340.0': 278
+        '2342.0': 279
+        '2350.0': 280
+        '2351.0': 281
+        '2352.0': 282
+        '2353.0': 283
+        '2360.0': 284
+        '2363.0': 285
+        '2372.0': 286
+        '2378.0': 287
+        '2380.0': 288
+        '2382.0': 289
+        '2388.0': 290
+        '2389.0': 291
+        '2390.0': 292
+        '2392.0': 293
+        '2393.0': 294
+        '2395.0': 295
+        '2397.0': 296
+        '2398.0': 297
+        '2399.0': 298
+        '2422.0': 299
+        '2426.0': 300
+        '2427.0': 301
+        '2433.0': 302
+        '2437.0': 303
+        '2455.0': 304
+        '254.0': 305
+        '292.0': 306
+        '315.0': 307
+        '324.0': 308
+        '3270.0': 309
+        '3271.0': 310
+        '328.0': 311
+        '33.0': 312
+        '3415.0': 313
+        '342.0': 314
+        '3454.0': 315
+        '353.0': 316
+        '3586.0': 317
+        '360.0': 318
+        '3616.0': 319
+        '3617.0': 320
+        '3621.0': 321
+        '3630.0': 322
+        '3631.0': 323
+        '3637.0': 324
+        '3638.0': 325
+        '3639.0': 326
+        '3642.0': 327
+        '3645.0': 328
+        '3650.0': 329
+        '3651.0': 330
+        '3660.0': 331
+        '3669.0': 332
+        '3701.0': 333
+        '3702.0': 334
+        '3703.0': 335
+        '3704.0': 336
+        '3714.0': 337
+        '3715.0': 338
+        '3732.0': 339
+        '3733.0': 340
+        '3742.0': 341
+        '3744.0': 342
+        '3762.0': 343
+        '3764.0': 344
+        '3804.0': 345
+        '39.0': 346
+        '417.0': 347
+        '419.0': 348
+        '443.0': 349
+        '465.0': 350
+        '467.0': 351
+        '482.0': 352
+        '484.0': 353
+        '489.0': 354
+        '491.0': 355
+        '495.0': 356
+        '497.0': 357
+        '498.0': 358
+        '504.0': 359
+        '536.0': 360
+        '546.0': 361
+        '547.0': 362
+        '551.0': 363
+        '557.0': 364
+        '559.0': 365
+        '565.0': 366
+        '570.0': 367
+        '579.0': 368
+        '584.0': 369
+        '592.0': 370
+        '60.0': 371
+        '601.0': 372
+        '61.0': 373
+        '617.0': 374
+        '62.0': 375
+        '634.0': 376
+        '636.0': 377
+        '66.0': 378
+        '666.0': 379
+        '667.0': 380
+        '671.0': 381
+        '681.0': 382
+        '689.0': 383
+        '694.0': 384
+        '695.0': 385
+        '696.0': 386
+        '7.0': 387
+        '709.0': 388
+        '728.0': 389
+        '73.0': 390
+        '736.0': 391
+        '742.0': 392
+        '743.0': 393
+        '759.0': 394
+        '777.0': 395
+        '79.0': 396
+        '793.0': 397
+        '795.0': 398
+        '797.0': 399
+        '8.0': 400
+        '81.0': 401
+        '813.0': 402
+        '82.0': 403
+        '831.0': 404
+        '837.0': 405
+        '84.0': 406
+        '844.0': 407
+        '845.0': 408
+        '847.0': 409
+        '857.0': 410
+        '865.0': 411
+        '879.0': 412
+        '88.0': 413
+        '888.0': 414
+        '9.0': 415
+        '901.0': 416
+        '915.0': 417
+        '926.0': 418
+        '93.0': 419
+        '945.0': 420
+        '954.0': 421
+        '982.0': 422
+        '984.0': 423
+        '986.0': 424
+        '992.0': 425
+        '994.0': 426
+        nan: 0
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 427
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U6
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 24
+          - 4
+          - 8
+        - false
+        - !!binary |
+          bgAAAGEAAABuAAAAAAAAAAAAAAAAAAAAMQAAAC4AAAAwAAAAAAAAAAAAAAAAAAAAMQAAADAAAAAu
+          AAAAMAAAAAAAAAAAAAAAMQAAADAAAAAwAAAALgAAADAAAAAAAAAAMQAAADAAAAAwAAAANAAAAC4A
+          AAAwAAAAMQAAADAAAAAxAAAAMAAAAC4AAAAwAAAAMQAAADAAAAAxAAAANQAAAC4AAAAwAAAAMQAA
+          ADAAAAAxAAAANwAAAC4AAAAwAAAAMQAAADAAAAAyAAAANwAAAC4AAAAwAAAAMQAAADAAAAAzAAAA
+          LgAAADAAAAAAAAAAMQAAADAAAAAzAAAAMAAAAC4AAAAwAAAAMQAAADAAAAAzAAAAOAAAAC4AAAAw
+          AAAAMQAAADAAAAA0AAAAMQAAAC4AAAAwAAAAMQAAADAAAAA0AAAANgAAAC4AAAAwAAAAMQAAADAA
+          AAA0AAAAOQAAAC4AAAAwAAAAMQAAADAAAAA1AAAAMgAAAC4AAAAwAAAAMQAAADAAAAA1AAAAMwAA
+          AC4AAAAwAAAAMQAAADAAAAA1AAAAOQAAAC4AAAAwAAAAMQAAADAAAAA2AAAAMgAAAC4AAAAwAAAA
+          MQAAADAAAAA3AAAAMQAAAC4AAAAwAAAAMQAAADAAAAA3AAAANQAAAC4AAAAwAAAAMQAAADAAAAA3
+          AAAANwAAAC4AAAAwAAAAMQAAADAAAAA3AAAAOQAAAC4AAAAwAAAAMQAAADAAAAA4AAAANAAAAC4A
+          AAAwAAAAMQAAADAAAAA4AAAANgAAAC4AAAAwAAAAMQAAADAAAAA5AAAAOQAAAC4AAAAwAAAAMQAA
+          ADEAAAAwAAAAMQAAAC4AAAAwAAAAMQAAADEAAAAxAAAANgAAAC4AAAAwAAAAMQAAADEAAAAxAAAA
+          OQAAAC4AAAAwAAAAMQAAADEAAAAyAAAAMwAAAC4AAAAwAAAAMQAAADEAAAAyAAAANwAAAC4AAAAw
+          AAAAMQAAADEAAAAzAAAAMQAAAC4AAAAwAAAAMQAAADEAAAA2AAAALgAAADAAAAAAAAAAMQAAADEA
+          AAA2AAAAOAAAAC4AAAAwAAAAMQAAADEAAAA3AAAALgAAADAAAAAAAAAAMQAAADEAAAA3AAAANgAA
+          AC4AAAAwAAAAMQAAADEAAAA4AAAALgAAADAAAAAAAAAAMQAAADEAAAA4AAAANQAAAC4AAAAwAAAA
+          MQAAADEAAAA4AAAANgAAAC4AAAAwAAAAMQAAADIAAAAuAAAAMAAAAAAAAAAAAAAAMQAAADIAAAAw
+          AAAALgAAADAAAAAAAAAAMQAAADIAAAAwAAAANAAAAC4AAAAwAAAAMQAAADIAAAAwAAAANgAAAC4A
+          AAAwAAAAMQAAADIAAAAwAAAANwAAAC4AAAAwAAAAMQAAADIAAAAxAAAAMQAAAC4AAAAwAAAAMQAA
+          ADIAAAAxAAAAOQAAAC4AAAAwAAAAMQAAADIAAAAyAAAANgAAAC4AAAAwAAAAMQAAADIAAAAzAAAA
+          NQAAAC4AAAAwAAAAMQAAADIAAAAzAAAANwAAAC4AAAAwAAAAMQAAADIAAAA0AAAAMgAAAC4AAAAw
+          AAAAMQAAADIAAAA0AAAANAAAAC4AAAAwAAAAMQAAADIAAAA1AAAANgAAAC4AAAAwAAAAMQAAADIA
+          AAA2AAAAMAAAAC4AAAAwAAAAMQAAADIAAAA2AAAAMgAAAC4AAAAwAAAAMQAAADIAAAA3AAAANAAA
+          AC4AAAAwAAAAMQAAADIAAAA3AAAANQAAAC4AAAAwAAAAMQAAADIAAAA4AAAALgAAADAAAAAAAAAA
+          MQAAADIAAAA4AAAAMgAAAC4AAAAwAAAAMQAAADIAAAA5AAAAOAAAAC4AAAAwAAAAMQAAADMAAAAu
+          AAAAMAAAAAAAAAAAAAAAMQAAADMAAAAxAAAANQAAAC4AAAAwAAAAMQAAADMAAAAyAAAANwAAAC4A
+          AAAwAAAAMQAAADMAAAAzAAAANgAAAC4AAAAwAAAAMQAAADMAAAA0AAAANAAAAC4AAAAwAAAAMQAA
+          ADMAAAA1AAAAMwAAAC4AAAAwAAAAMQAAADMAAAA3AAAAOQAAAC4AAAAwAAAAMQAAADMAAAA4AAAA
+          MQAAAC4AAAAwAAAAMQAAADMAAAA4AAAAMgAAAC4AAAAwAAAAMQAAADMAAAA4AAAANQAAAC4AAAAw
+          AAAAMQAAADQAAAAwAAAAMQAAAC4AAAAwAAAAMQAAADQAAAAwAAAAMgAAAC4AAAAwAAAAMQAAADQA
+          AAAwAAAAMwAAAC4AAAAwAAAAMQAAADQAAAAwAAAANwAAAC4AAAAwAAAAMQAAADQAAAAxAAAANQAA
+          AC4AAAAwAAAAMQAAADQAAAAyAAAANQAAAC4AAAAwAAAAMQAAADQAAAA1AAAAMQAAAC4AAAAwAAAA
+          MQAAADQAAAA1AAAAMgAAAC4AAAAwAAAAMQAAADQAAAA2AAAANwAAAC4AAAAwAAAAMQAAADQAAAA5
+          AAAANAAAAC4AAAAwAAAAMQAAADUAAAAwAAAAMQAAAC4AAAAwAAAAMQAAADUAAAAwAAAANQAAAC4A
+          AAAwAAAAMQAAADUAAAAxAAAANwAAAC4AAAAwAAAAMQAAADUAAAA0AAAAOQAAAC4AAAAwAAAAMQAA
+          ADUAAAA1AAAAMwAAAC4AAAAwAAAAMQAAADUAAAA2AAAANwAAAC4AAAAwAAAAMQAAADUAAAA5AAAA
+          NwAAAC4AAAAwAAAAMQAAADYAAAAuAAAAMAAAAAAAAAAAAAAAMQAAADYAAAAwAAAAMgAAAC4AAAAw
+          AAAAMQAAADYAAAAxAAAAOAAAAC4AAAAwAAAAMQAAADYAAAAzAAAALgAAADAAAAAAAAAAMQAAADYA
+          AAA1AAAANAAAAC4AAAAwAAAAMQAAADYAAAA1AAAANQAAAC4AAAAwAAAAMQAAADYAAAA2AAAANQAA
+          AC4AAAAwAAAAMQAAADYAAAA3AAAANgAAAC4AAAAwAAAAMQAAADYAAAA4AAAAOQAAAC4AAAAwAAAA
+          MQAAADYAAAA5AAAANAAAAC4AAAAwAAAAMQAAADYAAAA5AAAANQAAAC4AAAAwAAAAMQAAADYAAAA5
+          AAAANgAAAC4AAAAwAAAAMQAAADcAAAAwAAAAMQAAAC4AAAAwAAAAMQAAADcAAAAwAAAAMgAAAC4A
+          AAAwAAAAMQAAADcAAAAwAAAANQAAAC4AAAAwAAAAMQAAADcAAAAxAAAANwAAAC4AAAAwAAAAMQAA
+          ADcAAAAxAAAAOQAAAC4AAAAwAAAAMQAAADcAAAAyAAAAMgAAAC4AAAAwAAAAMQAAADcAAAAzAAAA
+          NgAAAC4AAAAwAAAAMQAAADcAAAAzAAAANwAAAC4AAAAwAAAAMQAAADcAAAAzAAAAOAAAAC4AAAAw
+          AAAAMQAAADcAAAA0AAAAMAAAAC4AAAAwAAAAMQAAADcAAAA0AAAAOQAAAC4AAAAwAAAAMQAAADcA
+          AAA1AAAAMAAAAC4AAAAwAAAAMQAAADcAAAA2AAAAMQAAAC4AAAAwAAAAMQAAADcAAAA2AAAAMgAA
+          AC4AAAAwAAAAMQAAADcAAAA2AAAANwAAAC4AAAAwAAAAMQAAADcAAAA2AAAAOAAAAC4AAAAwAAAA
+          MQAAADcAAAA3AAAAMQAAAC4AAAAwAAAAMQAAADcAAAA3AAAANAAAAC4AAAAwAAAAMQAAADcAAAA4
+          AAAAMgAAAC4AAAAwAAAAMQAAADcAAAA5AAAAMAAAAC4AAAAwAAAAMQAAADcAAAA5AAAAMgAAAC4A
+          AAAwAAAAMQAAADcAAAA5AAAANAAAAC4AAAAwAAAAMQAAADgAAAAwAAAAMAAAAC4AAAAwAAAAMQAA
+          ADgAAAAwAAAAMgAAAC4AAAAwAAAAMQAAADgAAAAwAAAAMwAAAC4AAAAwAAAAMQAAADgAAAAxAAAA
+          MAAAAC4AAAAwAAAAMQAAADgAAAAxAAAAMQAAAC4AAAAwAAAAMQAAADgAAAAxAAAAMgAAAC4AAAAw
+          AAAAMQAAADgAAAAxAAAAMwAAAC4AAAAwAAAAMQAAADgAAAAxAAAAOAAAAC4AAAAwAAAAMQAAADgA
+          AAAxAAAAOQAAAC4AAAAwAAAAMQAAADgAAAAyAAAAMAAAAC4AAAAwAAAAMQAAADgAAAAyAAAAMQAA
+          AC4AAAAwAAAAMQAAADgAAAAyAAAAMgAAAC4AAAAwAAAAMQAAADgAAAAyAAAANQAAAC4AAAAwAAAA
+          MQAAADgAAAAzAAAAMgAAAC4AAAAwAAAAMQAAADgAAAAzAAAANwAAAC4AAAAwAAAAMQAAADgAAAA0
+          AAAANgAAAC4AAAAwAAAAMQAAADgAAAA1AAAAOAAAAC4AAAAwAAAAMQAAADgAAAA2AAAAMQAAAC4A
+          AAAwAAAAMQAAADgAAAA2AAAANQAAAC4AAAAwAAAAMQAAADgAAAA2AAAANwAAAC4AAAAwAAAAMQAA
+          ADgAAAA3AAAAMQAAAC4AAAAwAAAAMQAAADgAAAA3AAAAOAAAAC4AAAAwAAAAMQAAADgAAAA3AAAA
+          OQAAAC4AAAAwAAAAMQAAADgAAAA4AAAAMwAAAC4AAAAwAAAAMQAAADgAAAA5AAAAMgAAAC4AAAAw
+          AAAAMQAAADgAAAA5AAAANAAAAC4AAAAwAAAAMQAAADgAAAA5AAAANQAAAC4AAAAwAAAAMQAAADgA
+          AAA5AAAAOAAAAC4AAAAwAAAAMQAAADgAAAA5AAAAOQAAAC4AAAAwAAAAMQAAADkAAAAwAAAANAAA
+          AC4AAAAwAAAAMQAAADkAAAAwAAAANQAAAC4AAAAwAAAAMQAAADkAAAAxAAAANQAAAC4AAAAwAAAA
+          MQAAADkAAAAyAAAANwAAAC4AAAAwAAAAMQAAADkAAAAyAAAAOAAAAC4AAAAwAAAAMQAAADkAAAAz
+          AAAAMQAAAC4AAAAwAAAAMQAAADkAAAAzAAAANAAAAC4AAAAwAAAAMQAAADkAAAAzAAAANgAAAC4A
+          AAAwAAAAMQAAADkAAAAzAAAANwAAAC4AAAAwAAAAMQAAADkAAAAzAAAAOAAAAC4AAAAwAAAAMQAA
+          ADkAAAA0AAAAMAAAAC4AAAAwAAAAMQAAADkAAAA0AAAANAAAAC4AAAAwAAAAMQAAADkAAAA0AAAA
+          NQAAAC4AAAAwAAAAMQAAADkAAAA1AAAANgAAAC4AAAAwAAAAMQAAADkAAAA1AAAANwAAAC4AAAAw
+          AAAAMQAAADkAAAA2AAAAMQAAAC4AAAAwAAAAMQAAADkAAAA2AAAANAAAAC4AAAAwAAAAMQAAADkA
+          AAA2AAAAOQAAAC4AAAAwAAAAMQAAADkAAAA3AAAAMAAAAC4AAAAwAAAAMQAAADkAAAA3AAAAMQAA
+          AC4AAAAwAAAAMQAAADkAAAA3AAAAOQAAAC4AAAAwAAAAMQAAADkAAAA4AAAAMgAAAC4AAAAwAAAA
+          MQAAADkAAAA4AAAAMwAAAC4AAAAwAAAAMQAAADkAAAA5AAAALgAAADAAAAAAAAAAMQAAADkAAAA5
+          AAAAMAAAAC4AAAAwAAAAMQAAADkAAAA5AAAAMgAAAC4AAAAwAAAAMQAAADkAAAA5AAAANAAAAC4A
+          AAAwAAAAMQAAADkAAAA5AAAANgAAAC4AAAAwAAAAMgAAADAAAAAwAAAAMwAAAC4AAAAwAAAAMgAA
+          ADAAAAAwAAAANwAAAC4AAAAwAAAAMgAAADAAAAAxAAAALgAAADAAAAAAAAAAMgAAADAAAAAxAAAA
+          NwAAAC4AAAAwAAAAMgAAADAAAAAxAAAAOQAAAC4AAAAwAAAAMgAAADAAAAAyAAAAMAAAAC4AAAAw
+          AAAAMgAAADAAAAAyAAAAMgAAAC4AAAAwAAAAMgAAADAAAAAyAAAANwAAAC4AAAAwAAAAMgAAADAA
+          AAAzAAAAMAAAAC4AAAAwAAAAMgAAADAAAAAzAAAANQAAAC4AAAAwAAAAMgAAADAAAAAzAAAAOQAA
+          AC4AAAAwAAAAMgAAADAAAAA0AAAALgAAADAAAAAAAAAAMgAAADAAAAA0AAAAMgAAAC4AAAAwAAAA
+          MgAAADAAAAA0AAAANQAAAC4AAAAwAAAAMgAAADAAAAA0AAAAOQAAAC4AAAAwAAAAMgAAADAAAAA1
+          AAAAMQAAAC4AAAAwAAAAMgAAADAAAAA2AAAAMAAAAC4AAAAwAAAAMgAAADAAAAA3AAAALgAAADAA
+          AAAAAAAAMgAAADAAAAA3AAAAMQAAAC4AAAAwAAAAMgAAADAAAAA3AAAAMwAAAC4AAAAwAAAAMgAA
+          ADAAAAA3AAAANQAAAC4AAAAwAAAAMgAAADAAAAA4AAAANAAAAC4AAAAwAAAAMgAAADAAAAA4AAAA
+          OQAAAC4AAAAwAAAAMgAAADAAAAA5AAAAMgAAAC4AAAAwAAAAMgAAADAAAAA5AAAANgAAAC4AAAAw
+          AAAAMgAAADAAAAA5AAAAOQAAAC4AAAAwAAAAMgAAADEAAAAwAAAALgAAADAAAAAAAAAAMgAAADEA
+          AAAwAAAAMAAAAC4AAAAwAAAAMgAAADEAAAAwAAAAMwAAAC4AAAAwAAAAMgAAADEAAAAwAAAANQAA
+          AC4AAAAwAAAAMgAAADEAAAAwAAAANgAAAC4AAAAwAAAAMgAAADEAAAAwAAAANwAAAC4AAAAwAAAA
+          MgAAADEAAAAxAAAAMAAAAC4AAAAwAAAAMgAAADEAAAAxAAAANAAAAC4AAAAwAAAAMgAAADEAAAAy
+          AAAAMAAAAC4AAAAwAAAAMgAAADEAAAAyAAAAMgAAAC4AAAAwAAAAMgAAADEAAAAyAAAAMwAAAC4A
+          AAAwAAAAMgAAADEAAAAyAAAANwAAAC4AAAAwAAAAMgAAADEAAAAzAAAAMAAAAC4AAAAwAAAAMgAA
+          ADEAAAAzAAAAMQAAAC4AAAAwAAAAMgAAADEAAAAzAAAAMgAAAC4AAAAwAAAAMgAAADEAAAAzAAAA
+          NQAAAC4AAAAwAAAAMgAAADEAAAAzAAAANwAAAC4AAAAwAAAAMgAAADEAAAAzAAAAOQAAAC4AAAAw
+          AAAAMgAAADEAAAA0AAAAMAAAAC4AAAAwAAAAMgAAADEAAAA0AAAAMQAAAC4AAAAwAAAAMgAAADEA
+          AAA0AAAAMgAAAC4AAAAwAAAAMgAAADEAAAA0AAAAOQAAAC4AAAAwAAAAMgAAADEAAAA1AAAAMAAA
+          AC4AAAAwAAAAMgAAADEAAAA1AAAAMQAAAC4AAAAwAAAAMgAAADEAAAA1AAAAMgAAAC4AAAAwAAAA
+          MgAAADEAAAA1AAAAOAAAAC4AAAAwAAAAMgAAADEAAAA2AAAAMAAAAC4AAAAwAAAAMgAAADEAAAA2
+          AAAAMQAAAC4AAAAwAAAAMgAAADEAAAA2AAAAMwAAAC4AAAAwAAAAMgAAADEAAAA2AAAANAAAAC4A
+          AAAwAAAAMgAAADEAAAA2AAAANQAAAC4AAAAwAAAAMgAAADEAAAA2AAAANwAAAC4AAAAwAAAAMgAA
+          ADEAAAA3AAAAMwAAAC4AAAAwAAAAMgAAADEAAAA3AAAANgAAAC4AAAAwAAAAMgAAADEAAAA3AAAA
+          NwAAAC4AAAAwAAAAMgAAADEAAAA3AAAAOAAAAC4AAAAwAAAAMgAAADEAAAA4AAAAOAAAAC4AAAAw
+          AAAAMgAAADEAAAA5AAAAMAAAAC4AAAAwAAAAMgAAADEAAAA5AAAAMwAAAC4AAAAwAAAAMgAAADEA
+          AAA5AAAANAAAAC4AAAAwAAAAMgAAADEAAAA5AAAANwAAAC4AAAAwAAAAMgAAADIAAAAwAAAANwAA
+          AC4AAAAwAAAAMgAAADIAAAAwAAAAOAAAAC4AAAAwAAAAMgAAADIAAAAxAAAALgAAADAAAAAAAAAA
+          MgAAADIAAAAxAAAAOQAAAC4AAAAwAAAAMgAAADIAAAAyAAAAMQAAAC4AAAAwAAAAMgAAADIAAAAz
+          AAAANgAAAC4AAAAwAAAAMgAAADIAAAA1AAAAMgAAAC4AAAAwAAAAMgAAADIAAAA1AAAANAAAAC4A
+          AAAwAAAAMgAAADIAAAA1AAAAOQAAAC4AAAAwAAAAMgAAADIAAAA2AAAAMAAAAC4AAAAwAAAAMgAA
+          ADIAAAA2AAAANAAAAC4AAAAwAAAAMgAAADIAAAA2AAAANgAAAC4AAAAwAAAAMgAAADIAAAA2AAAA
+          OQAAAC4AAAAwAAAAMgAAADIAAAA3AAAAMgAAAC4AAAAwAAAAMgAAADIAAAA3AAAAMwAAAC4AAAAw
+          AAAAMgAAADIAAAA3AAAANwAAAC4AAAAwAAAAMgAAADIAAAA3AAAAOAAAAC4AAAAwAAAAMgAAADIA
+          AAA4AAAAMwAAAC4AAAAwAAAAMgAAADIAAAA4AAAAOQAAAC4AAAAwAAAAMgAAADIAAAA5AAAALgAA
+          ADAAAAAAAAAAMgAAADIAAAA5AAAANgAAAC4AAAAwAAAAMgAAADMAAAAwAAAALgAAADAAAAAAAAAA
+          MgAAADMAAAAwAAAAMQAAAC4AAAAwAAAAMgAAADMAAAAwAAAAMgAAAC4AAAAwAAAAMgAAADMAAAAw
+          AAAAMwAAAC4AAAAwAAAAMgAAADMAAAAwAAAANQAAAC4AAAAwAAAAMgAAADMAAAAwAAAAOAAAAC4A
+          AAAwAAAAMgAAADMAAAAxAAAAMQAAAC4AAAAwAAAAMgAAADMAAAAxAAAAMgAAAC4AAAAwAAAAMgAA
+          ADMAAAAxAAAAOAAAAC4AAAAwAAAAMgAAADMAAAAyAAAAMAAAAC4AAAAwAAAAMgAAADMAAAAyAAAA
+          MQAAAC4AAAAwAAAAMgAAADMAAAAyAAAAMgAAAC4AAAAwAAAAMgAAADMAAAAzAAAANAAAAC4AAAAw
+          AAAAMgAAADMAAAA0AAAAMAAAAC4AAAAwAAAAMgAAADMAAAA0AAAAMgAAAC4AAAAwAAAAMgAAADMA
+          AAA1AAAAMAAAAC4AAAAwAAAAMgAAADMAAAA1AAAAMQAAAC4AAAAwAAAAMgAAADMAAAA1AAAAMgAA
+          AC4AAAAwAAAAMgAAADMAAAA1AAAAMwAAAC4AAAAwAAAAMgAAADMAAAA2AAAAMAAAAC4AAAAwAAAA
+          MgAAADMAAAA2AAAAMwAAAC4AAAAwAAAAMgAAADMAAAA3AAAAMgAAAC4AAAAwAAAAMgAAADMAAAA3
+          AAAAOAAAAC4AAAAwAAAAMgAAADMAAAA4AAAAMAAAAC4AAAAwAAAAMgAAADMAAAA4AAAAMgAAAC4A
+          AAAwAAAAMgAAADMAAAA4AAAAOAAAAC4AAAAwAAAAMgAAADMAAAA4AAAAOQAAAC4AAAAwAAAAMgAA
+          ADMAAAA5AAAAMAAAAC4AAAAwAAAAMgAAADMAAAA5AAAAMgAAAC4AAAAwAAAAMgAAADMAAAA5AAAA
+          MwAAAC4AAAAwAAAAMgAAADMAAAA5AAAANQAAAC4AAAAwAAAAMgAAADMAAAA5AAAANwAAAC4AAAAw
+          AAAAMgAAADMAAAA5AAAAOAAAAC4AAAAwAAAAMgAAADMAAAA5AAAAOQAAAC4AAAAwAAAAMgAAADQA
+          AAAyAAAAMgAAAC4AAAAwAAAAMgAAADQAAAAyAAAANgAAAC4AAAAwAAAAMgAAADQAAAAyAAAANwAA
+          AC4AAAAwAAAAMgAAADQAAAAzAAAAMwAAAC4AAAAwAAAAMgAAADQAAAAzAAAANwAAAC4AAAAwAAAA
+          MgAAADQAAAA1AAAANQAAAC4AAAAwAAAAMgAAADUAAAA0AAAALgAAADAAAAAAAAAAMgAAADkAAAAy
+          AAAALgAAADAAAAAAAAAAMwAAADEAAAA1AAAALgAAADAAAAAAAAAAMwAAADIAAAA0AAAALgAAADAA
+          AAAAAAAAMwAAADIAAAA3AAAAMAAAAC4AAAAwAAAAMwAAADIAAAA3AAAAMQAAAC4AAAAwAAAAMwAA
+          ADIAAAA4AAAALgAAADAAAAAAAAAAMwAAADMAAAAuAAAAMAAAAAAAAAAAAAAAMwAAADQAAAAxAAAA
+          NQAAAC4AAAAwAAAAMwAAADQAAAAyAAAALgAAADAAAAAAAAAAMwAAADQAAAA1AAAANAAAAC4AAAAw
+          AAAAMwAAADUAAAAzAAAALgAAADAAAAAAAAAAMwAAADUAAAA4AAAANgAAAC4AAAAwAAAAMwAAADYA
+          AAAwAAAALgAAADAAAAAAAAAAMwAAADYAAAAxAAAANgAAAC4AAAAwAAAAMwAAADYAAAAxAAAANwAA
+          AC4AAAAwAAAAMwAAADYAAAAyAAAAMQAAAC4AAAAwAAAAMwAAADYAAAAzAAAAMAAAAC4AAAAwAAAA
+          MwAAADYAAAAzAAAAMQAAAC4AAAAwAAAAMwAAADYAAAAzAAAANwAAAC4AAAAwAAAAMwAAADYAAAAz
+          AAAAOAAAAC4AAAAwAAAAMwAAADYAAAAzAAAAOQAAAC4AAAAwAAAAMwAAADYAAAA0AAAAMgAAAC4A
+          AAAwAAAAMwAAADYAAAA0AAAANQAAAC4AAAAwAAAAMwAAADYAAAA1AAAAMAAAAC4AAAAwAAAAMwAA
+          ADYAAAA1AAAAMQAAAC4AAAAwAAAAMwAAADYAAAA2AAAAMAAAAC4AAAAwAAAAMwAAADYAAAA2AAAA
+          OQAAAC4AAAAwAAAAMwAAADcAAAAwAAAAMQAAAC4AAAAwAAAAMwAAADcAAAAwAAAAMgAAAC4AAAAw
+          AAAAMwAAADcAAAAwAAAAMwAAAC4AAAAwAAAAMwAAADcAAAAwAAAANAAAAC4AAAAwAAAAMwAAADcA
+          AAAxAAAANAAAAC4AAAAwAAAAMwAAADcAAAAxAAAANQAAAC4AAAAwAAAAMwAAADcAAAAzAAAAMgAA
+          AC4AAAAwAAAAMwAAADcAAAAzAAAAMwAAAC4AAAAwAAAAMwAAADcAAAA0AAAAMgAAAC4AAAAwAAAA
+          MwAAADcAAAA0AAAANAAAAC4AAAAwAAAAMwAAADcAAAA2AAAAMgAAAC4AAAAwAAAAMwAAADcAAAA2
+          AAAANAAAAC4AAAAwAAAAMwAAADgAAAAwAAAANAAAAC4AAAAwAAAAMwAAADkAAAAuAAAAMAAAAAAA
+          AAAAAAAANAAAADEAAAA3AAAALgAAADAAAAAAAAAANAAAADEAAAA5AAAALgAAADAAAAAAAAAANAAA
+          ADQAAAAzAAAALgAAADAAAAAAAAAANAAAADYAAAA1AAAALgAAADAAAAAAAAAANAAAADYAAAA3AAAA
+          LgAAADAAAAAAAAAANAAAADgAAAAyAAAALgAAADAAAAAAAAAANAAAADgAAAA0AAAALgAAADAAAAAA
+          AAAANAAAADgAAAA5AAAALgAAADAAAAAAAAAANAAAADkAAAAxAAAALgAAADAAAAAAAAAANAAAADkA
+          AAA1AAAALgAAADAAAAAAAAAANAAAADkAAAA3AAAALgAAADAAAAAAAAAANAAAADkAAAA4AAAALgAA
+          ADAAAAAAAAAANQAAADAAAAA0AAAALgAAADAAAAAAAAAANQAAADMAAAA2AAAALgAAADAAAAAAAAAA
+          NQAAADQAAAA2AAAALgAAADAAAAAAAAAANQAAADQAAAA3AAAALgAAADAAAAAAAAAANQAAADUAAAAx
+          AAAALgAAADAAAAAAAAAANQAAADUAAAA3AAAALgAAADAAAAAAAAAANQAAADUAAAA5AAAALgAAADAA
+          AAAAAAAANQAAADYAAAA1AAAALgAAADAAAAAAAAAANQAAADcAAAAwAAAALgAAADAAAAAAAAAANQAA
+          ADcAAAA5AAAALgAAADAAAAAAAAAANQAAADgAAAA0AAAALgAAADAAAAAAAAAANQAAADkAAAAyAAAA
+          LgAAADAAAAAAAAAANgAAADAAAAAuAAAAMAAAAAAAAAAAAAAANgAAADAAAAAxAAAALgAAADAAAAAA
+          AAAANgAAADEAAAAuAAAAMAAAAAAAAAAAAAAANgAAADEAAAA3AAAALgAAADAAAAAAAAAANgAAADIA
+          AAAuAAAAMAAAAAAAAAAAAAAANgAAADMAAAA0AAAALgAAADAAAAAAAAAANgAAADMAAAA2AAAALgAA
+          ADAAAAAAAAAANgAAADYAAAAuAAAAMAAAAAAAAAAAAAAANgAAADYAAAA2AAAALgAAADAAAAAAAAAA
+          NgAAADYAAAA3AAAALgAAADAAAAAAAAAANgAAADcAAAAxAAAALgAAADAAAAAAAAAANgAAADgAAAAx
+          AAAALgAAADAAAAAAAAAANgAAADgAAAA5AAAALgAAADAAAAAAAAAANgAAADkAAAA0AAAALgAAADAA
+          AAAAAAAANgAAADkAAAA1AAAALgAAADAAAAAAAAAANgAAADkAAAA2AAAALgAAADAAAAAAAAAANwAA
+          AC4AAAAwAAAAAAAAAAAAAAAAAAAANwAAADAAAAA5AAAALgAAADAAAAAAAAAANwAAADIAAAA4AAAA
+          LgAAADAAAAAAAAAANwAAADMAAAAuAAAAMAAAAAAAAAAAAAAANwAAADMAAAA2AAAALgAAADAAAAAA
+          AAAANwAAADQAAAAyAAAALgAAADAAAAAAAAAANwAAADQAAAAzAAAALgAAADAAAAAAAAAANwAAADUA
+          AAA5AAAALgAAADAAAAAAAAAANwAAADcAAAA3AAAALgAAADAAAAAAAAAANwAAADkAAAAuAAAAMAAA
+          AAAAAAAAAAAANwAAADkAAAAzAAAALgAAADAAAAAAAAAANwAAADkAAAA1AAAALgAAADAAAAAAAAAA
+          NwAAADkAAAA3AAAALgAAADAAAAAAAAAAOAAAAC4AAAAwAAAAAAAAAAAAAAAAAAAAOAAAADEAAAAu
+          AAAAMAAAAAAAAAAAAAAAOAAAADEAAAAzAAAALgAAADAAAAAAAAAAOAAAADIAAAAuAAAAMAAAAAAA
+          AAAAAAAAOAAAADMAAAAxAAAALgAAADAAAAAAAAAAOAAAADMAAAA3AAAALgAAADAAAAAAAAAAOAAA
+          ADQAAAAuAAAAMAAAAAAAAAAAAAAAOAAAADQAAAA0AAAALgAAADAAAAAAAAAAOAAAADQAAAA1AAAA
+          LgAAADAAAAAAAAAAOAAAADQAAAA3AAAALgAAADAAAAAAAAAAOAAAADUAAAA3AAAALgAAADAAAAAA
+          AAAAOAAAADYAAAA1AAAALgAAADAAAAAAAAAAOAAAADcAAAA5AAAALgAAADAAAAAAAAAAOAAAADgA
+          AAAuAAAAMAAAAAAAAAAAAAAAOAAAADgAAAA4AAAALgAAADAAAAAAAAAAOQAAAC4AAAAwAAAAAAAA
+          AAAAAAAAAAAAOQAAADAAAAAxAAAALgAAADAAAAAAAAAAOQAAADEAAAA1AAAALgAAADAAAAAAAAAA
+          OQAAADIAAAA2AAAALgAAADAAAAAAAAAAOQAAADMAAAAuAAAAMAAAAAAAAAAAAAAAOQAAADQAAAA1
+          AAAALgAAADAAAAAAAAAAOQAAADUAAAA0AAAALgAAADAAAAAAAAAAOQAAADgAAAAyAAAALgAAADAA
+          AAAAAAAAOQAAADgAAAA0AAAALgAAADAAAAAAAAAAOQAAADgAAAA2AAAALgAAADAAAAAAAAAAOQAA
+          ADkAAAAyAAAALgAAADAAAAAAAAAAOQAAADkAAAA0AAAALgAAADAAAAAAAAAA
+      warn: true
+    vehicle_type: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: true
+      classes_: &id013
+        Compact: 1
+        Compact HEV: 2
+        Compact SUV: 3
+        Electric: 4
+        Fullsize SUV: 5
+        Imported: 6
+        Micro SUV: 7
+        Microcar: 8
+        Midsize: 9
+        Midsize HEV: 10
+        Midsize SUV: 11
+        Passenger Van: 12
+        Subcompact: 13
+        Subcompact SUV: 14
+        Subcompact SUV HEV: 15
+        Upper Midsize: 16
+        nan: 0
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 17
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U18
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 72
+          - 4
+          - 8
+        - false
+        - !!binary |
+          bgAAAGEAAABuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAQwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAA
+          ACAAAABIAAAARQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQwAAAG8AAABtAAAA
+          cAAAAGEAAABjAAAAdAAAACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAARQAAAGwAAABlAAAAYwAAAHQAAAByAAAAaQAAAGMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAARgAAAHUAAABsAAAAbAAAAHMAAABpAAAAegAAAGUAAAAgAAAAUwAA
+          AFUAAABWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASQAAAG0AAABwAAAAbwAAAHIAAAB0AAAA
+          ZQAAAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABj
+          AAAAcgAAAG8AAAAgAAAAUwAAAFUAAABWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAATQAAAGkAAABjAAAAcgAAAG8AAABjAAAAYQAAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6AAAAZQAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6
+          AAAAZQAAACAAAABIAAAARQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkA
+          AABkAAAAcwAAAGkAAAB6AAAAZQAAACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAUAAAAGEAAABzAAAAcwAAAGUAAABuAAAAZwAAAGUAAAByAAAAIAAAAFYAAABhAAAA
+          bgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUwAAAHUAAABiAAAAYwAAAG8AAABtAAAAcAAAAGEAAABj
+          AAAAdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUwAAAHUAAABiAAAAYwAAAG8A
+          AABtAAAAcAAAAGEAAABjAAAAdAAAACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAUwAA
+          AHUAAABiAAAAYwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAAACAAAABTAAAAVQAAAFYAAAAgAAAA
+          SAAAAEUAAABWAAAAVQAAAHAAAABwAAAAZQAAAHIAAAAgAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6
+          AAAAZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      warn: true
+    week: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id014
+        '1': 0
+        '10': 1
+        '11': 2
+        '12': 3
+        '13': 4
+        '14': 5
+        '15': 6
+        '16': 7
+        '17': 8
+        '18': 9
+        '19': 10
+        '2': 11
+        '20': 12
+        '21': 13
+        '22': 14
+        '23': 15
+        '24': 16
+        '25': 17
+        '26': 18
+        '27': 19
+        '28': 20
+        '29': 21
+        '3': 22
+        '30': 23
+        '31': 24
+        '32': 25
+        '33': 26
+        '34': 27
+        '35': 28
+        '36': 29
+        '37': 30
+        '38': 31
+        '39': 32
+        '4': 33
+        '40': 34
+        '41': 35
+        '42': 36
+        '43': 37
+        '44': 38
+        '45': 39
+        '46': 40
+        '47': 41
+        '48': 42
+        '49': 43
+        '5': 44
+        '50': 45
+        '51': 46
+        '52': 47
+        '6': 48
+        '7': 49
+        '8': 50
+        '9': 51
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 52
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U2
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 8
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAAAAAAAAxAAAAMAAAADEAAAAxAAAAMQAAADIAAAAxAAAAMwAAADEAAAA0AAAAMQAAADUAAAAx
+          AAAANgAAADEAAAA3AAAAMQAAADgAAAAxAAAAOQAAADIAAAAAAAAAMgAAADAAAAAyAAAAMQAAADIA
+          AAAyAAAAMgAAADMAAAAyAAAANAAAADIAAAA1AAAAMgAAADYAAAAyAAAANwAAADIAAAA4AAAAMgAA
+          ADkAAAAzAAAAAAAAADMAAAAwAAAAMwAAADEAAAAzAAAAMgAAADMAAAAzAAAAMwAAADQAAAAzAAAA
+          NQAAADMAAAA2AAAAMwAAADcAAAAzAAAAOAAAADMAAAA5AAAANAAAAAAAAAA0AAAAMAAAADQAAAAx
+          AAAANAAAADIAAAA0AAAAMwAAADQAAAA0AAAANAAAADUAAAA0AAAANgAAADQAAAA3AAAANAAAADgA
+          AAA0AAAAOQAAADUAAAAAAAAANQAAADAAAAA1AAAAMQAAADUAAAAyAAAANgAAAAAAAAA3AAAAAAAA
+          ADgAAAAAAAAAOQAAAAAAAAA=
+      warn: true
+  constant_fill_strategy: null
+  group_ids:
+  - spot_id
+  - vehicle_type
+  lags: null
+  max_encoder_length: 60
+  max_prediction_length: 20
+  min_encoder_length: 60
+  min_prediction_idx: !!python/object/apply:numpy._core.multiarray.scalar
+  - &id002 !!python/object/apply:numpy.dtype
+    args:
+    - i8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    AAAAAAAAAAA=
+  min_prediction_length: 20
+  predict_mode: false
+  randomize_length: null
+  scalers:
+    RH: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - &id004 !!python/object/apply:numpy.dtype
+          args:
+          - O8
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - '|'
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 63
+        - false
+        - - RH
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - &id003 !!python/object/apply:numpy.dtype
+          args:
+          - f8
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 0
+        - false
+        - !!binary |
+          Ngx4YrbTUEA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          27fD+v6ELEA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          /QRb9uZqaUA=
+      with_mean: true
+      with_std: true
+    W: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - W
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          Q4jUOQhJAEA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          z9ntHagL7D8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          Dgtoc2qU6D8=
+      with_mean: true
+      with_std: true
+    avg_standard_rate_inv: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - avg_standard_rate_inv
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          d3Ox1gmmxkA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          I0H5Sf6aqEA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          yJdiJmzrYkE=
+      with_mean: true
+      with_std: true
+    avg_vehicle_age_inv: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - avg_vehicle_age_inv
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          NIlOQByf+z8=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          o5/zCjwn9D8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          7cT3UHZi+T8=
+      with_mean: true
+      with_std: true
+    coupon_count: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - coupon_count
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          36818oJz7z8=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          ZoLTHAB18T8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          oArnzvcL8z8=
+      with_mean: true
+      with_std: true
+    coupon_count_lag7: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - coupon_count_lag7
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          zmhF7Y486z8=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          Xbw3euCr8T8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          Xjk4XnOE8z8=
+      with_mean: true
+      with_std: true
+    coupon_flag_prev1: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - coupon_flag_prev1
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          7hw/21sm4j8=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          iGVS2ba13z8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          ouaeJRpszz8=
+      with_mean: true
+      with_std: true
+    coupon_per_vehicle: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - coupon_per_vehicle
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          EswgGC3CwkA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          i8rsh+p30EA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          q0PtzVfzsEE=
+      with_mean: true
+      with_std: true
+    day_to_offday: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - day_to_offday
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          8X0ns4Kx8j8=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          6fD75Xdh8D8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          iOo+jUHF8D8=
+      with_mean: true
+      with_std: true
+    encoder_length: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - encoder_length
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          AAAAAAAA8D8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      with_mean: true
+      with_std: true
+    has_inventory: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - has_inventory
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          AAAAAAAA8D8=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          AAAAAAAA8D8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      with_mean: true
+      with_std: true
+    inventory_est: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - inventory_est
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          lnurzo01AUA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          WfJsqU9OAkA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          mKd1h7LxFEA=
+      with_mean: true
+      with_std: true
+    lag_1: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - lag_1
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          CCji25qh8kA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          arharzWm8kA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          nNo2Zbe89UE=
+      with_mean: true
+      with_std: true
+    lag_28: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - lag_28
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          4DdRmqTS8EA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          SE3xtYHa8kA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          Q2sY7Es39kE=
+      with_mean: true
+      with_std: true
+    lag_7: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - lag_7
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          vmmYP0Dd8UA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          vG58gFHb8kA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          cnDUqTU59kE=
+      with_mean: true
+      with_std: true
+    offday_run: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - offday_run
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          sJUZu4Nf5z8=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          2vJD0bL98T8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          yeOYq9I69D8=
+      with_mean: true
+      with_std: true
+    rain_mm_lag1: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - rain_mm_lag1
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          gxK0FREQEUA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          Rg9xkeXoLUA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          RL/IHr/0a0A=
+      with_mean: true
+      with_std: true
+    region_rev_per_vehicle: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - region_rev_per_vehicle
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          Qho8aPa72EA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          L1LW39LyyEA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          3KSo6m5zo0E=
+      with_mean: true
+      with_std: true
+    region_total_rev: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - region_total_rev
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          nd1cbBZMbEE=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          0Xv4XstLaEE=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          iWTOlGRy4kI=
+      with_mean: true
+      with_std: true
+    region_vehicle_count: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - region_vehicle_count
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          lUpA605PiEA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          F/3PkbLIhUA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          lznINqqoHUE=
+      with_mean: true
+      with_std: true
+    region_vehicle_mean_rev: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - region_vehicle_mean_rev
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          +JHyyLip9j8=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          3PqDfx0Q7T8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          xeu5lD1l6j8=
+      with_mean: true
+      with_std: true
+    relative_time_idx: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - relative_time_idx
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          AAAAAAAA8D8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      with_mean: true
+      with_std: true
+    rev_per_vehicle_center: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - rev_per_vehicle_center
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          NCUj8ShO50A=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          /cLmS6qbyEA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          JLcjr3TsokE=
+      with_mean: true
+      with_std: true
+    rev_per_vehicle_scale: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - rev_per_vehicle_scale
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          pxN8xMTO3EA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          0q7h6MKYt0A=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          mvkLb3FmgUE=
+      with_mean: true
+      with_std: true
+    roll_mean_7: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - roll_mean_7
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          Tr1hYIWs1kA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          /dPJbJGJ20A=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          Oflcz3Syx0E=
+      with_mean: true
+      with_std: true
+    roll_std_7: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - roll_std_7
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          3LCJCGVs40A=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          X43jXlVn4kA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          NzJtchsr1UE=
+      with_mean: true
+      with_std: true
+    utilization_7: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - utilization_7
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          9D4PjbnE8j8=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          +XjReXYb8D8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          XF3rFhw38D8=
+      with_mean: true
+      with_std: true
+    vehicle_count: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id004
+        - false
+        - - vehicle_count
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          23bayyxA9z8=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id002
+      - !!binary |
+        2U8GAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          md2B6/GE7D8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id003
+        - false
+        - !!binary |
+          SR0fr89q6T8=
+      with_mean: true
+      with_std: true
+  static_categoricals:
+  - spot_id
+  - vehicle_type
+  - region_code
+  static_reals: null
+  target: rev_per_vehicle
+  target_normalizer: &id015 !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+    _groups:
+    - spot_id
+    - vehicle_type
+    _method_kwargs: {}
+    center: true
+    groups:
+    - spot_id
+    - vehicle_type
+    method: standard
+    method_kwargs: {}
+    missing_:
+      center: 47949.851078315565
+      scale: 29875.67195297688
+    norm_: !!python/object:pandas.core.frame.DataFrame
+      _flags:
+        allows_duplicate_labels: true
+      _metadata: []
+      _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+      - !!python/tuple
+        - !!python/object/apply:pandas._libs.internals._unpickle_block
+          - !!python/object/apply:numpy._core.multiarray._reconstruct
+            args:
+            - *id001
+            - !!python/tuple
+              - 0
+            - !!binary |
+              Yg==
+            state: !!python/tuple
+            - 1
+            - !!python/tuple
+              - 2
+              - 904
+            - *id003
+            - false
+            - !!binary |
+              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
+          - !!python/object/apply:builtins.slice
+            - 0
+            - 2
+            - 1
+          - 2
+      - - !!python/object/apply:pandas.core.indexes.base._new_Index
+          - &id005 !!python/name:pandas.core.indexes.base.Index ''
+          - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+              - *id004
+              - false
+              - - center
+                - scale
+            name: null
+        - !!python/object/apply:pandas.core.indexes.base._new_Index
+          - !!python/name:pandas.core.indexes.multi.MultiIndex ''
+          - codes:
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 904
+              - !!python/object/apply:numpy.dtype
+                args:
+                - i2
+                - false
+                - true
+                state: !!python/tuple
+                - 3
+                - <
+                - null
+                - null
+                - null
+                - -1
+                - -1
+                - 0
+              - false
+              - !!binary |
+                AAABAAIAAwADAAQABQAGAAcACAAJAAkACQAJAAkACQAJAAkACQAJAAoACgAKAAoACwAMAAwADQAN
+                AA0ADQANAA0ADQAOAA8ADwAPAA8ADwAPABAAEQARABEAEQASABMAEwATABMAEwAUABUAFgAXABcA
+                FwAXABcAFwAXABcAFwAYABgAGAAZABoAGwAcAB0AHgAfAB8AHwAgACEAIgAiACIAIwAkACQAJQAm
+                ACcAJwAnACcAJwAnACcAJwAoACkAKQAqACsAKwArACwALAAsACwALAAtAC4ALgAuAC8ALwAwADEA
+                MgAyADIAMwA0ADUANQA2ADYANwA4ADkAOQA6ADsAOwA7ADsAOwA7ADwAPAA9AD0APQA+AD4APwBA
+                AEAAQQBCAEMARABEAEQARQBGAEcASABJAEkASQBJAEkASQBKAEoASwBLAEsASwBLAEsASwBLAEwA
+                TQBOAE4ATgBOAE4ATgBOAE8ATwBQAFEAUgBSAFMAVABUAFQAVABUAFQAVQBWAFYAVwBYAFkAWQBZ
+                AFkAWQBZAFkAWQBZAFoAWgBaAFsAXABcAFwAXABcAFwAXQBeAF4AXwBfAF8AXwBgAGAAYABhAGEA
+                YQBhAGEAYQBhAGEAYgBjAGMAYwBjAGMAYwBkAGQAZABkAGQAZABkAGQAZQBlAGUAZgBmAGYAZgBm
+                AGYAZgBmAGYAZwBoAGgAaABpAGoAawBrAGsAbABsAG0AbQBtAG4AbwBwAHEAcgByAHMAcwB0AHQA
+                dAB0AHQAdQB2AHcAeAB4AHgAeAB4AHkAeQB6AHoAegB6AHoAegB6AHsAfAB8AH0AfgB/AH8AfwB/
+                AH8AfwB/AIAAgACAAIAAgACAAIEAgQCBAIEAgQCCAIIAggCDAIQAhACFAIYAhwCIAIgAiACIAIkA
+                igCKAIsAiwCMAIwAjACNAI4AjgCOAI4AjgCOAI4AjgCOAI4AjgCOAI8AkACQAJAAkACQAJEAkQCS
+                AJIAkgCSAJMAlACVAJYAlwCXAJcAlwCYAJkAmQCaAJoAmgCaAJoAmgCaAJoAmgCbAJsAmwCbAJsA
+                nACcAJwAnACdAJ4AnwCgAKAAoACgAKEAoQChAKEAoQChAKEAoQCiAKIAowCkAKQApQClAKUApgCm
+                AKcAqACpAKkAqQCqAKoAqgCrAKwArQCtAK4ArgCvALAAsQCyALIAsgCzALMAtAC1ALYAtgC3ALgA
+                uAC4ALkAuQC6ALsAuwC8AL0AvQC9AL4AvgC+AL8AvwDAAMAAwADAAMAAwADBAMIAwgDCAMMAwwDE
+                AMQAxADEAMUAxgDGAMcAyADIAMgAyQDJAMkAyQDKAMoAywDLAMsAzADMAMwAzADMAMwAzADMAM0A
+                zQDOAM4AzwDPAM8A0ADRANIA0gDSANMA0wDTANMA0wDUANQA1QDVANUA1QDWANcA2ADYANgA2ADY
+                ANgA2ADYANgA2QDZANkA2gDbANwA3QDdAN0A3QDdAN4A3gDeAN4A3gDeAN8A4ADhAOIA4gDiAOIA
+                4wDkAOUA5gDmAOYA5gDmAOYA5gDmAOYA5wDnAOcA6ADpAOkA6QDpAOoA6gDrAOsA7ADsAOwA7ADs
+                AOwA7QDuAO8A7wDvAPAA8QDxAPEA8gDyAPIA8gDzAPQA9AD1APYA9wD4APgA+AD4APgA+AD4APkA
+                +QD6APsA+wD8AP0A/QD+AP8A/wAAAQABAAEBAQIBAwEEAQUBBgEHAQcBBwEIAQkBCQEJAQoBCwEM
+                AQ0BDgEPARABEQESARIBEwEUARQBFQEVARYBFgEWARcBGAEZARkBGgEbARwBHQEeAR4BHgEfAR8B
+                IAEhASIBIgEjASMBIwEjASQBJQElASUBJQElASYBJwEnASgBKQEpASkBKgErASsBLAEsAS0BLQEu
+                AS8BMAExATIBMgEyATMBMwE0ATUBNQE1ATUBNQE2ATcBNwE4ATgBOQE6ATsBPAE9AT4BPwFAAUAB
+                QQFBAUIBQwFEAUUBRgFHAUgBSAFJAUoBSwFLAUwBTAFNAU4BTwFQAVABUQFRAVIBUwFUAVUBVgFX
+                AVgBWQFZAVkBWgFbAVwBXQFeAV4BXwFfAWABYAFhAWEBYQFhAWEBYQFhAWIBYwFkAWUBZgFmAWYB
+                ZgFnAWgBaAFpAWkBagFqAWoBawFrAWwBbQFuAW8BcAFxAXIBcwFzAXQBdQF1AXUBdgF3AXcBeAF4
+                AXgBeQF5AXkBegF7AXwBfAF8AX0BfgF/AX8BgAGBAYEBggGDAYQBhQGFAYUBhgGHAYgBiQGJAYoB
+                igGLAYwBjAGMAY0BjQGOAY8BkAGQAZEBkQGSAZIBkgGTAZMBkwGUAZUBlgGXAZcBmAGYAZkBmgGb
+                AZwBnQGdAZ4BnwGfAaABoQGiAaIBowGkAaUBpgGmAacBqAGoAagBqQE=
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 904
+              - !!python/object/apply:numpy.dtype
+                args:
+                - i1
+                - false
+                - true
+                state: !!python/tuple
+                - 3
+                - '|'
+                - null
+                - null
+                - null
+                - -1
+                - -1
+                - 0
+              - false
+              - !!binary |
+                Bw0AAAgAAAAADQABAwQHCAsNDg8ABQcNDQANAAMICw0ODwAAAwQICw8NAAcNDgAAAwcIDQAABwAC
+                AwcICQsNDgAHCAAABwAAAAAHDQcAAA0OBwANAAAAAgMHCAkNDgAABwAADQ4AAQIDDQUADQ8ACAAA
+                AAcNAAAABwANAAYABwAAAgMIDQ4ADQAIDQgNAAANBwAAAAcMAAAHAAAHCAkNDgADAAECAwcIDQ8A
+                AAABAgcIDQ4ADwAAAAcAAAEHCAwNDQAOAA0AAgMFBwgLDQ8ACA0AAAIDCA0PAAAOAAgNDwAIDgAC
+                AwgJCw0OAAABAwgNDwACAwcICQ0OAAcIAAIDBwgJCw0OAAAJDQAHAAMIAAgAAwgNAAAAAA4ADQAB
+                BwgNAAAAAAMIDQ8IDwACAwgNDg8OCA8IAAADBwgJDQ4AAgcJDQ4ABwkNDgAJDgAADQAADAACCA0A
+                AA4ADgcNDg0AAQIDBgcICgsNDg8FAAEHCQ0ADQACCQ0HBwcAAAMIDQ0ADQACAwQGBwgNDwABCA0O
+                AAkNDg0FAAAIDQ4AAQIICQ0ODwAIAAAIAAcIAAcHDQAIDgAIDQgAAAgACAgAAAAHCAAHAAAABwAA
+                CA0ADgcABwAACQ4ACQ4ACQAHCAkNDgcACA0ACQABCA0ABwgAAAgOAAEIDAgPAAMIAAMHCAoNDg8A
+                CAAHAAgNAAAABwgAAggJDQcNAAkMDQAAAAECAwcICQ0OAAEIAA0AAAgJDQ4ABwgJDQ4AAAAACAkN
+                AAAAAAECAwcICgsPAAgNAAABCA8ACAAIAAIICw0OBwAAAwgAAAgNAAgNDgcADQcNBwABAwQICw8A
+                CAgACAgAAgAADQAJDQkIAAAABwAHDQcACA0AAAAAAAAAAAANAAAIAAgABwgHDgAHCAAAAAAIDgkO
+                AAAABwAFCA0AAAMIDQ4AAA0AAAkODQAIAQgACAgAAAAABw0ABwAAAwgNDwcADQAIAAAAAAADDQAD
+                AA0AAAAAAA0ACAAHAA4ABw0AAAACAAIAAAAAAAAAAAcNBw0NAAAHAAcADQADBAcICg8NBwAHAAcI
+                DQ0ABwAHAAgNAAcAAAcAAAAHAAcHAAcNBwAHAAkNAAcNAAcABw0ABwAIAAcNAAAAAAcNBwAAAAcA
+                CAAABwgABwcAAAcADQAFDQAHDQAADQcNAA4AAAAAAAgHAA0ADQAHAAAAAA0AAAgNAA==
+            levels:
+            - !!python/object/apply:pandas.core.indexes.base._new_Index
+              - *id005
+              - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                  args:
+                  - *id001
+                  - !!python/tuple
+                    - 0
+                  - !!binary |
+                    Yg==
+                  state: !!python/tuple
+                  - 1
+                  - !!python/tuple
+                    - 426
+                  - *id002
+                  - false
+                  - !!binary |
+                    AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                    AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                    AAAAAAAAEAAAAAAAAAARAAAAAAAAABIAAAAAAAAAEwAAAAAAAAAUAAAAAAAAABUAAAAAAAAAFgAA
+                    AAAAAAAXAAAAAAAAABgAAAAAAAAAGQAAAAAAAAAaAAAAAAAAABsAAAAAAAAAHAAAAAAAAAAdAAAA
+                    AAAAAB4AAAAAAAAAHwAAAAAAAAAgAAAAAAAAACEAAAAAAAAAIgAAAAAAAAAjAAAAAAAAACQAAAAA
+                    AAAAJQAAAAAAAAAmAAAAAAAAACcAAAAAAAAAKAAAAAAAAAApAAAAAAAAACoAAAAAAAAAKwAAAAAA
+                    AAAsAAAAAAAAAC0AAAAAAAAALgAAAAAAAAAvAAAAAAAAADAAAAAAAAAAMQAAAAAAAAAyAAAAAAAA
+                    ADMAAAAAAAAANAAAAAAAAAA1AAAAAAAAADYAAAAAAAAANwAAAAAAAAA4AAAAAAAAADkAAAAAAAAA
+                    OgAAAAAAAAA7AAAAAAAAADwAAAAAAAAAPQAAAAAAAAA+AAAAAAAAAD8AAAAAAAAAQAAAAAAAAABB
+                    AAAAAAAAAEIAAAAAAAAAQwAAAAAAAABEAAAAAAAAAEUAAAAAAAAARgAAAAAAAABHAAAAAAAAAEgA
+                    AAAAAAAASQAAAAAAAABKAAAAAAAAAEsAAAAAAAAATAAAAAAAAABNAAAAAAAAAE4AAAAAAAAATwAA
+                    AAAAAABQAAAAAAAAAFEAAAAAAAAAUgAAAAAAAABTAAAAAAAAAFQAAAAAAAAAVQAAAAAAAABWAAAA
+                    AAAAAFcAAAAAAAAAWAAAAAAAAABZAAAAAAAAAFoAAAAAAAAAWwAAAAAAAABcAAAAAAAAAF0AAAAA
+                    AAAAXgAAAAAAAABfAAAAAAAAAGAAAAAAAAAAYQAAAAAAAABiAAAAAAAAAGMAAAAAAAAAZAAAAAAA
+                    AABlAAAAAAAAAGYAAAAAAAAAZwAAAAAAAABoAAAAAAAAAGkAAAAAAAAAagAAAAAAAABrAAAAAAAA
+                    AGwAAAAAAAAAbQAAAAAAAABuAAAAAAAAAG8AAAAAAAAAcAAAAAAAAABxAAAAAAAAAHIAAAAAAAAA
+                    cwAAAAAAAAB0AAAAAAAAAHUAAAAAAAAAdgAAAAAAAAB3AAAAAAAAAHgAAAAAAAAAeQAAAAAAAAB6
+                    AAAAAAAAAHsAAAAAAAAAfAAAAAAAAAB9AAAAAAAAAH4AAAAAAAAAfwAAAAAAAACAAAAAAAAAAIEA
+                    AAAAAAAAggAAAAAAAACDAAAAAAAAAIQAAAAAAAAAhQAAAAAAAACGAAAAAAAAAIcAAAAAAAAAiAAA
+                    AAAAAACJAAAAAAAAAIoAAAAAAAAAiwAAAAAAAACMAAAAAAAAAI0AAAAAAAAAjgAAAAAAAACPAAAA
+                    AAAAAJAAAAAAAAAAkQAAAAAAAACSAAAAAAAAAJMAAAAAAAAAlAAAAAAAAACVAAAAAAAAAJYAAAAA
+                    AAAAlwAAAAAAAACYAAAAAAAAAJkAAAAAAAAAmgAAAAAAAACbAAAAAAAAAJwAAAAAAAAAnQAAAAAA
+                    AACeAAAAAAAAAJ8AAAAAAAAAoAAAAAAAAAChAAAAAAAAAKIAAAAAAAAAowAAAAAAAACkAAAAAAAA
+                    AKUAAAAAAAAApgAAAAAAAACnAAAAAAAAAKgAAAAAAAAAqQAAAAAAAACqAAAAAAAAAKsAAAAAAAAA
+                    rAAAAAAAAACtAAAAAAAAAK4AAAAAAAAArwAAAAAAAACwAAAAAAAAALEAAAAAAAAAsgAAAAAAAACz
+                    AAAAAAAAALQAAAAAAAAAtQAAAAAAAAC2AAAAAAAAALcAAAAAAAAAuAAAAAAAAAC5AAAAAAAAALoA
+                    AAAAAAAAuwAAAAAAAAC8AAAAAAAAAL0AAAAAAAAAvgAAAAAAAAC/AAAAAAAAAMAAAAAAAAAAwQAA
+                    AAAAAADCAAAAAAAAAMMAAAAAAAAAxAAAAAAAAADFAAAAAAAAAMYAAAAAAAAAxwAAAAAAAADIAAAA
+                    AAAAAMkAAAAAAAAAygAAAAAAAADLAAAAAAAAAMwAAAAAAAAAzQAAAAAAAADOAAAAAAAAAM8AAAAA
+                    AAAA0AAAAAAAAADRAAAAAAAAANIAAAAAAAAA0wAAAAAAAADUAAAAAAAAANUAAAAAAAAA1gAAAAAA
+                    AADXAAAAAAAAANgAAAAAAAAA2QAAAAAAAADaAAAAAAAAANsAAAAAAAAA3AAAAAAAAADdAAAAAAAA
+                    AN4AAAAAAAAA3wAAAAAAAADgAAAAAAAAAOEAAAAAAAAA4gAAAAAAAADjAAAAAAAAAOQAAAAAAAAA
+                    5QAAAAAAAADmAAAAAAAAAOcAAAAAAAAA6AAAAAAAAADpAAAAAAAAAOoAAAAAAAAA6wAAAAAAAADs
+                    AAAAAAAAAO0AAAAAAAAA7gAAAAAAAADvAAAAAAAAAPAAAAAAAAAA8QAAAAAAAADyAAAAAAAAAPMA
+                    AAAAAAAA9AAAAAAAAAD1AAAAAAAAAPYAAAAAAAAA9wAAAAAAAAD4AAAAAAAAAPkAAAAAAAAA+gAA
+                    AAAAAAD7AAAAAAAAAPwAAAAAAAAA/QAAAAAAAAD+AAAAAAAAAP8AAAAAAAAAAAEAAAAAAAABAQAA
+                    AAAAAAIBAAAAAAAAAwEAAAAAAAAEAQAAAAAAAAUBAAAAAAAABgEAAAAAAAAHAQAAAAAAAAgBAAAA
+                    AAAACQEAAAAAAAAKAQAAAAAAAAsBAAAAAAAADAEAAAAAAAANAQAAAAAAAA4BAAAAAAAADwEAAAAA
+                    AAAQAQAAAAAAABEBAAAAAAAAEgEAAAAAAAATAQAAAAAAABQBAAAAAAAAFQEAAAAAAAAWAQAAAAAA
+                    ABcBAAAAAAAAGAEAAAAAAAAZAQAAAAAAABoBAAAAAAAAGwEAAAAAAAAcAQAAAAAAAB0BAAAAAAAA
+                    HgEAAAAAAAAfAQAAAAAAACABAAAAAAAAIQEAAAAAAAAiAQAAAAAAACMBAAAAAAAAJAEAAAAAAAAl
+                    AQAAAAAAACYBAAAAAAAAJwEAAAAAAAAoAQAAAAAAACkBAAAAAAAAKgEAAAAAAAArAQAAAAAAACwB
+                    AAAAAAAALQEAAAAAAAAuAQAAAAAAAC8BAAAAAAAAMAEAAAAAAAAxAQAAAAAAADIBAAAAAAAAMwEA
+                    AAAAAAA0AQAAAAAAADUBAAAAAAAANgEAAAAAAAA3AQAAAAAAADgBAAAAAAAAOQEAAAAAAAA6AQAA
+                    AAAAADsBAAAAAAAAPAEAAAAAAAA9AQAAAAAAAD4BAAAAAAAAPwEAAAAAAABAAQAAAAAAAEEBAAAA
+                    AAAAQgEAAAAAAABDAQAAAAAAAEQBAAAAAAAARQEAAAAAAABGAQAAAAAAAEcBAAAAAAAASAEAAAAA
+                    AABJAQAAAAAAAEoBAAAAAAAASwEAAAAAAABMAQAAAAAAAE0BAAAAAAAATgEAAAAAAABPAQAAAAAA
+                    AFABAAAAAAAAUQEAAAAAAABSAQAAAAAAAFMBAAAAAAAAVAEAAAAAAABVAQAAAAAAAFYBAAAAAAAA
+                    VwEAAAAAAABYAQAAAAAAAFkBAAAAAAAAWgEAAAAAAABbAQAAAAAAAFwBAAAAAAAAXQEAAAAAAABe
+                    AQAAAAAAAF8BAAAAAAAAYAEAAAAAAABhAQAAAAAAAGIBAAAAAAAAYwEAAAAAAABkAQAAAAAAAGUB
+                    AAAAAAAAZgEAAAAAAABnAQAAAAAAAGgBAAAAAAAAaQEAAAAAAABqAQAAAAAAAGsBAAAAAAAAbAEA
+                    AAAAAABtAQAAAAAAAG4BAAAAAAAAbwEAAAAAAABwAQAAAAAAAHEBAAAAAAAAcgEAAAAAAABzAQAA
+                    AAAAAHQBAAAAAAAAdQEAAAAAAAB2AQAAAAAAAHcBAAAAAAAAeAEAAAAAAAB5AQAAAAAAAHoBAAAA
+                    AAAAewEAAAAAAAB8AQAAAAAAAH0BAAAAAAAAfgEAAAAAAAB/AQAAAAAAAIABAAAAAAAAgQEAAAAA
+                    AACCAQAAAAAAAIMBAAAAAAAAhAEAAAAAAACFAQAAAAAAAIYBAAAAAAAAhwEAAAAAAACIAQAAAAAA
+                    AIkBAAAAAAAAigEAAAAAAACLAQAAAAAAAIwBAAAAAAAAjQEAAAAAAACOAQAAAAAAAI8BAAAAAAAA
+                    kAEAAAAAAACRAQAAAAAAAJIBAAAAAAAAkwEAAAAAAACUAQAAAAAAAJUBAAAAAAAAlgEAAAAAAACX
+                    AQAAAAAAAJgBAAAAAAAAmQEAAAAAAACaAQAAAAAAAJsBAAAAAAAAnAEAAAAAAACdAQAAAAAAAJ4B
+                    AAAAAAAAnwEAAAAAAACgAQAAAAAAAKEBAAAAAAAAogEAAAAAAACjAQAAAAAAAKQBAAAAAAAApQEA
+                    AAAAAACmAQAAAAAAAKcBAAAAAAAAqAEAAAAAAACpAQAAAAAAAKoBAAAAAAAA
+                name: spot_id
+            - !!python/object/apply:pandas.core.indexes.base._new_Index
+              - *id005
+              - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                  args:
+                  - *id001
+                  - !!python/tuple
+                    - 0
+                  - !!binary |
+                    Yg==
+                  state: !!python/tuple
+                  - 1
+                  - !!python/tuple
+                    - 16
+                  - *id002
+                  - false
+                  - !!binary |
+                    AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                    AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                    AAAAAAAAEAAAAAAAAAA=
+                name: vehicle_type
+            names:
+            - spot_id
+            - vehicle_type
+            sortorder: null
+      _typ: dataframe
+      attrs: {}
+    scale_by_group: false
+    transformation: null
+  time_idx: time_idx
+  time_varying_known_categoricals:
+  - dow
+  - week
+  - month
+  - quarter
+  - is_weekend
+  - is_holiday
+  time_varying_known_reals:
+  - day_to_offday
+  - offday_run
+  - rain_mm_lag1
+  - RH
+  - W
+  - inventory_est
+  - has_inventory
+  - avg_vehicle_age_inv
+  - avg_standard_rate_inv
+  time_varying_unknown_categoricals: null
+  time_varying_unknown_reals:
+  - lag_1
+  - lag_7
+  - lag_28
+  - roll_mean_7
+  - roll_std_7
+  - utilization_7
+  - vehicle_count
+  - coupon_count
+  - coupon_flag_prev1
+  - coupon_count_lag7
+  - coupon_per_vehicle
+  - region_total_rev
+  - region_vehicle_count
+  - region_rev_per_vehicle
+  - region_vehicle_mean_rev
+  variable_groups: null
+  weight: null
+dropout: 0.13462583036216633
+embedding_labels:
+  dow: *id006
+  is_holiday: *id007
+  is_weekend: *id008
+  month: *id009
+  quarter: *id010
+  region_code: *id011
+  spot_id: *id012
+  vehicle_type: *id013
+  week: *id014
+embedding_paddings:
+- spot_id
+- vehicle_type
+embedding_sizes:
+  dow: !!python/tuple
+  - 7
+  - 5
+  is_holiday: !!python/tuple
+  - 2
+  - 1
+  is_weekend: !!python/tuple
+  - 2
+  - 1
+  month: !!python/tuple
+  - 12
+  - 6
+  quarter: !!python/tuple
+  - 4
+  - 3
+  region_code: !!python/tuple
+  - 11
+  - 6
+  spot_id: !!python/tuple
+  - 427
+  - 48
+  vehicle_type: !!python/tuple
+  - 17
+  - 8
+  week: !!python/tuple
+  - 52
+  - 15
+hidden_continuous_size: 11
+hidden_continuous_sizes: {}
+hidden_size: 13
+learning_rate: 0.001
+log_gradient_flow: false
+log_interval: -1
+log_val_interval: null
+lstm_layers: 1
+max_encoder_length: 60
+monotone_constaints: {}
+monotone_constraints: {}
+optimizer: adam
+optimizer_params: null
+output_size: 7
+output_transformer: *id015
+reduce_on_plateau_min_lr: 1.0e-05
+reduce_on_plateau_patience: 4
+reduce_on_plateau_reduction: 2.0
+share_single_variable_networks: false
+static_categoricals:
+- spot_id
+- vehicle_type
+- region_code
+static_reals:
+- encoder_length
+- rev_per_vehicle_center
+- rev_per_vehicle_scale
+time_varying_categoricals_decoder:
+- dow
+- week
+- month
+- quarter
+- is_weekend
+- is_holiday
+time_varying_categoricals_encoder:
+- dow
+- week
+- month
+- quarter
+- is_weekend
+- is_holiday
+time_varying_reals_decoder:
+- day_to_offday
+- offday_run
+- rain_mm_lag1
+- RH
+- W
+- inventory_est
+- has_inventory
+- avg_vehicle_age_inv
+- avg_standard_rate_inv
+- relative_time_idx
+time_varying_reals_encoder:
+- day_to_offday
+- offday_run
+- rain_mm_lag1
+- RH
+- W
+- inventory_est
+- has_inventory
+- avg_vehicle_age_inv
+- avg_standard_rate_inv
+- relative_time_idx
+- lag_1
+- lag_7
+- lag_28
+- roll_mean_7
+- roll_std_7
+- utilization_7
+- vehicle_count
+- coupon_count
+- coupon_flag_prev1
+- coupon_count_lag7
+- coupon_per_vehicle
+- region_total_rev
+- region_vehicle_count
+- region_rev_per_vehicle
+- region_vehicle_mean_rev
+weight_decay: 0.0
+x_categoricals:
+- spot_id
+- vehicle_type
+- region_code
+- dow
+- week
+- month
+- quarter
+- is_weekend
+- is_holiday
+x_reals:
+- encoder_length
+- rev_per_vehicle_center
+- rev_per_vehicle_scale
+- day_to_offday
+- offday_run
+- rain_mm_lag1
+- RH
+- W
+- inventory_est
+- has_inventory
+- avg_vehicle_age_inv
+- avg_standard_rate_inv
+- relative_time_idx
+- lag_1
+- lag_7
+- lag_28
+- roll_mean_7
+- roll_std_7
+- utilization_7
+- vehicle_count
+- coupon_count
+- coupon_flag_prev1
+- coupon_count_lag7
+- coupon_per_vehicle
+- region_total_rev
+- region_vehicle_count
+- region_rev_per_vehicle
+- region_vehicle_mean_rev

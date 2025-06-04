@@ -1,0 +1,45 @@
+embeddings {
+  tensor_name: "vehicle_type:00247"
+  metadata_path: "00247/vehicle_type/metadata.tsv"
+  tensor_path: "00247/vehicle_type/tensors.tsv"
+}
+embeddings {
+  tensor_name: "spot_id:00247"
+  metadata_path: "00247/spot_id/metadata.tsv"
+  tensor_path: "00247/spot_id/tensors.tsv"
+}
+embeddings {
+  tensor_name: "region_code:00247"
+  metadata_path: "00247/region_code/metadata.tsv"
+  tensor_path: "00247/region_code/tensors.tsv"
+}
+embeddings {
+  tensor_name: "dow:00247"
+  metadata_path: "00247/dow/metadata.tsv"
+  tensor_path: "00247/dow/tensors.tsv"
+}
+embeddings {
+  tensor_name: "week:00247"
+  metadata_path: "00247/week/metadata.tsv"
+  tensor_path: "00247/week/tensors.tsv"
+}
+embeddings {
+  tensor_name: "month:00247"
+  metadata_path: "00247/month/metadata.tsv"
+  tensor_path: "00247/month/tensors.tsv"
+}
+embeddings {
+  tensor_name: "quarter:00247"
+  metadata_path: "00247/quarter/metadata.tsv"
+  tensor_path: "00247/quarter/tensors.tsv"
+}
+embeddings {
+  tensor_name: "is_weekend:00247"
+  metadata_path: "00247/is_weekend/metadata.tsv"
+  tensor_path: "00247/is_weekend/tensors.tsv"
+}
+embeddings {
+  tensor_name: "is_holiday:00247"
+  metadata_path: "00247/is_holiday/metadata.tsv"
+  tensor_path: "00247/is_holiday/tensors.tsv"
+}

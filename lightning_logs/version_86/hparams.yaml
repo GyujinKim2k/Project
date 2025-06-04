@@ -1,0 +1,3123 @@
+attention_head_size: 6
+categorical_groups: {}
+causal_attention: true
+dataset_parameters:
+  add_encoder_length: true
+  add_relative_time_idx: true
+  add_target_scales: true
+  allow_missing_timesteps: true
+  categorical_encoders:
+    __group_id__vehicle_type: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_:
+        Compact: 0
+        Compact HEV: 1
+        Compact SUV: 2
+        Electric: 3
+        Fullsize SUV: 4
+        Imported: 5
+        Micro SUV: 6
+        Microcar: 7
+        Midsize: 8
+        Midsize HEV: 9
+        Midsize SUV: 10
+        Passenger Van: 11
+        Subcompact: 12
+        Subcompact SUV: 13
+        Subcompact SUV HEV: 14
+        Upper Midsize: 15
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - &id001 !!python/name:numpy.ndarray ''
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 16
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U18
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 72
+          - 4
+          - 8
+        - false
+        - !!binary |
+          QwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAQwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAAACAAAABIAAAARQAAAFYA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAA
+          ACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARQAAAGwAAABlAAAA
+          YwAAAHQAAAByAAAAaQAAAGMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAARgAAAHUAAABsAAAAbAAAAHMAAABpAAAAegAAAGUAAAAgAAAAUwAAAFUAAABWAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAASQAAAG0AAABwAAAAbwAAAHIAAAB0AAAAZQAAAGQAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABjAAAAcgAAAG8AAAAgAAAA
+          UwAAAFUAAABWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABj
+          AAAAcgAAAG8AAABjAAAAYQAAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6AAAAZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6AAAAZQAAACAAAABIAAAA
+          RQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6
+          AAAAZQAAACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAGEA
+          AABzAAAAcwAAAGUAAABuAAAAZwAAAGUAAAByAAAAIAAAAFYAAABhAAAAbgAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAUwAAAHUAAABiAAAAYwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUwAAAHUAAABiAAAAYwAAAG8AAABtAAAAcAAAAGEAAABj
+          AAAAdAAAACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAUwAAAHUAAABiAAAAYwAAAG8A
+          AABtAAAAcAAAAGEAAABjAAAAdAAAACAAAABTAAAAVQAAAFYAAAAgAAAASAAAAEUAAABWAAAAVQAA
+          AHAAAABwAAAAZQAAAHIAAAAgAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6AAAAZQAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAA
+      warn: true
+    dow: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id010
+        '0': 0
+        '1': 1
+        '2': 2
+        '3': 3
+        '4': 4
+        '5': 5
+        '6': 6
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 7
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U1
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 4
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MAAAADEAAAAyAAAAMwAAADQAAAA1AAAANgAAAA==
+      warn: true
+    is_holiday: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id011
+        'False': 0
+        'True': 1
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 2
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U5
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 20
+          - 4
+          - 8
+        - false
+        - !!binary |
+          RgAAAGEAAABsAAAAcwAAAGUAAABUAAAAcgAAAHUAAABlAAAAAAAAAA==
+      warn: true
+    is_weekend: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id012
+        '0': 0
+        '1': 1
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 2
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U1
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 4
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MAAAADEAAAA=
+      warn: true
+    month: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id013
+        '1': 0
+        '10': 1
+        '11': 2
+        '12': 3
+        '2': 4
+        '3': 5
+        '4': 6
+        '5': 7
+        '6': 8
+        '7': 9
+        '8': 10
+        '9': 11
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 12
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U2
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 8
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAAAAAAAAxAAAAMAAAADEAAAAxAAAAMQAAADIAAAAyAAAAAAAAADMAAAAAAAAANAAAAAAAAAA1
+          AAAAAAAAADYAAAAAAAAANwAAAAAAAAA4AAAAAAAAADkAAAAAAAAA
+      warn: true
+    quarter: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id014
+        '1': 0
+        '2': 1
+        '3': 2
+        '4': 3
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 4
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U1
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 4
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAADIAAAAzAAAANAAAAA==
+      warn: true
+    region_code: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id015
+        '108': 0
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U3
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 12
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAADAAAAA4AAAA
+      warn: true
+    spot_id: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id016
+        '1883.0': 0
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U6
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 24
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAADgAAAA4AAAAMwAAAC4AAAAwAAAA
+      warn: true
+    vehicle_type: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: true
+      classes_: &id017
+        Compact: 1
+        Compact HEV: 2
+        Compact SUV: 3
+        Electric: 4
+        Fullsize SUV: 5
+        Imported: 6
+        Micro SUV: 7
+        Microcar: 8
+        Midsize: 9
+        Midsize HEV: 10
+        Midsize SUV: 11
+        Passenger Van: 12
+        Subcompact: 13
+        Subcompact SUV: 14
+        Subcompact SUV HEV: 15
+        Upper Midsize: 16
+        nan: 0
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 17
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U18
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 72
+          - 4
+          - 8
+        - false
+        - !!binary |
+          bgAAAGEAAABuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAQwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAA
+          ACAAAABIAAAARQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQwAAAG8AAABtAAAA
+          cAAAAGEAAABjAAAAdAAAACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAARQAAAGwAAABlAAAAYwAAAHQAAAByAAAAaQAAAGMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAARgAAAHUAAABsAAAAbAAAAHMAAABpAAAAegAAAGUAAAAgAAAAUwAA
+          AFUAAABWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASQAAAG0AAABwAAAAbwAAAHIAAAB0AAAA
+          ZQAAAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABj
+          AAAAcgAAAG8AAAAgAAAAUwAAAFUAAABWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAATQAAAGkAAABjAAAAcgAAAG8AAABjAAAAYQAAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6AAAAZQAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6
+          AAAAZQAAACAAAABIAAAARQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATQAAAGkA
+          AABkAAAAcwAAAGkAAAB6AAAAZQAAACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAUAAAAGEAAABzAAAAcwAAAGUAAABuAAAAZwAAAGUAAAByAAAAIAAAAFYAAABhAAAA
+          bgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUwAAAHUAAABiAAAAYwAAAG8AAABtAAAAcAAAAGEAAABj
+          AAAAdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUwAAAHUAAABiAAAAYwAAAG8A
+          AABtAAAAcAAAAGEAAABjAAAAdAAAACAAAABTAAAAVQAAAFYAAAAAAAAAAAAAAAAAAAAAAAAAUwAA
+          AHUAAABiAAAAYwAAAG8AAABtAAAAcAAAAGEAAABjAAAAdAAAACAAAABTAAAAVQAAAFYAAAAgAAAA
+          SAAAAEUAAABWAAAAVQAAAHAAAABwAAAAZQAAAHIAAAAgAAAATQAAAGkAAABkAAAAcwAAAGkAAAB6
+          AAAAZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      warn: true
+    week: !!python/object:pytorch_forecasting.data.encoders.NaNLabelEncoder
+      add_nan: false
+      classes_: &id018
+        '1': 0
+        '10': 1
+        '11': 2
+        '12': 3
+        '13': 4
+        '14': 5
+        '15': 6
+        '16': 7
+        '17': 8
+        '18': 9
+        '19': 10
+        '2': 11
+        '20': 12
+        '21': 13
+        '22': 14
+        '23': 15
+        '24': 16
+        '25': 17
+        '26': 18
+        '27': 19
+        '28': 20
+        '29': 21
+        '3': 22
+        '30': 23
+        '31': 24
+        '32': 25
+        '33': 26
+        '34': 27
+        '35': 28
+        '36': 29
+        '37': 30
+        '38': 31
+        '39': 32
+        '4': 33
+        '40': 34
+        '41': 35
+        '42': 36
+        '43': 37
+        '44': 38
+        '45': 39
+        '46': 40
+        '47': 41
+        '48': 42
+        '49': 43
+        '5': 44
+        '50': 45
+        '51': 46
+        '52': 47
+        '6': 48
+        '7': 49
+        '8': 50
+        '9': 51
+      classes_vector_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 52
+        - !!python/object/apply:numpy.dtype
+          args:
+          - U2
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - 8
+          - 4
+          - 8
+        - false
+        - !!binary |
+          MQAAAAAAAAAxAAAAMAAAADEAAAAxAAAAMQAAADIAAAAxAAAAMwAAADEAAAA0AAAAMQAAADUAAAAx
+          AAAANgAAADEAAAA3AAAAMQAAADgAAAAxAAAAOQAAADIAAAAAAAAAMgAAADAAAAAyAAAAMQAAADIA
+          AAAyAAAAMgAAADMAAAAyAAAANAAAADIAAAA1AAAAMgAAADYAAAAyAAAANwAAADIAAAA4AAAAMgAA
+          ADkAAAAzAAAAAAAAADMAAAAwAAAAMwAAADEAAAAzAAAAMgAAADMAAAAzAAAAMwAAADQAAAAzAAAA
+          NQAAADMAAAA2AAAAMwAAADcAAAAzAAAAOAAAADMAAAA5AAAANAAAAAAAAAA0AAAAMAAAADQAAAAx
+          AAAANAAAADIAAAA0AAAAMwAAADQAAAA0AAAANAAAADUAAAA0AAAANgAAADQAAAA3AAAANAAAADgA
+          AAA0AAAAOQAAADUAAAAAAAAANQAAADAAAAA1AAAAMQAAADUAAAAyAAAANgAAAAAAAAA3AAAAAAAA
+          ADgAAAAAAAAAOQAAAAAAAAA=
+      warn: true
+  constant_fill_strategy: null
+  group_ids:
+  - vehicle_type
+  lags: null
+  max_encoder_length: 90
+  max_prediction_length: 60
+  min_encoder_length: 90
+  min_prediction_idx: !!python/object/apply:numpy._core.multiarray.scalar
+  - &id007 !!python/object/apply:numpy.dtype
+    args:
+    - i8
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - -1
+    - -1
+    - 0
+  - !!binary |
+    AAAAAAAAAAA=
+  min_prediction_length: 1
+  predict_mode: false
+  randomize_length: null
+  scalers:
+    RH: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 67.02567567567567
+        scale: 13.942985940011752
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: &id003 []
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - &id004 !!python/object/apply:numpy.dtype
+                args:
+                - f8
+                - false
+                - true
+                state: !!python/tuple
+                - 3
+                - <
+                - null
+                - null
+                - null
+                - -1
+                - -1
+                - 0
+              - false
+              - !!binary |
+                GtWWq6TBUEC2hX6Q47NQQBrVlqukwVBAF+XKpITBUEA6WWw6WexPQPnXiH+NuE9ACk35Ia9+UEAa
+                1ZarpMFQQBrVlqukwVBAm9OkFxWEUEAdG71C+8JQQBrVlqukwVBA/klpUHG6UEAa1ZarpMFQQJ7l
+                pWp7CFFAGtWWq6TBUEBo4JkNz+IrQKt9bvUkGSxAaOCZDc/iK0AN5VTH69YrQA0PxFACrSpAhDWR
+                UJwtLECIZ81jUaMsQGjgmQ3P4itAaOCZDc/iK0D+UV77XJUrQJI+Rce5/CtAaOCZDc/iK0BNiH3t
+                b9gtQGjgmQ3P4itAPNbIAvBfKUBo4JkNz+IrQA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - &id002 !!python/name:pandas.core.indexes.base.Index ''
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - &id005 !!python/object/apply:numpy.dtype
+                  args:
+                  - O8
+                  - false
+                  - true
+                  state: !!python/tuple
+                  - 3
+                  - '|'
+                  - null
+                  - null
+                  - null
+                  - -1
+                  - -1
+                  - 63
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - &id006 !!python/object/apply:numpy.dtype
+                  args:
+                  - i8
+                  - false
+                  - true
+                  state: !!python/tuple
+                  - 3
+                  - <
+                  - null
+                  - null
+                  - null
+                  - -1
+                  - -1
+                  - 0
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    W: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 2.306906906906907
+        scale: 0.6528082537567683
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                SafAm4t0AkCZgjlwZ30CQEmnwJuLdAJAIa0zPQVuAkCovGinvGgDQAdDaDCEBgNAebAENVKHAkBJ
+                p8Cbi3QCQEmnwJuLdAJAWDrJgaWTAkABswDp13sCQEmnwJuLdAJAaKf3WxkGAkBJp8Cbi3QCQFim
+                2C/6aQJASafAm4t0AkDMNo4izuPkPxf6LZwpFuU/zDaOIs7j5D/JQsScWtfkP6H6KD1ZKOg/NmYD
+                eqb84j9QjXYqAn7lP8w2jiLO4+Q/zDaOIs7j5D+S7hxkCHTlP+zYC++S9eQ/zDaOIs7j5D/rG9Mm
+                WZfiP8w2jiLO4+Q/lTelIIor5j/MNo4izuPkPw==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    avg_standard_rate_inv: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 14678.687530325085
+        scale: 185.27651806159403
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                VwLYL1qqw0AAAAAAAGTJQKuqqqqqMMxAaiDF8lu81EAAAAAAAI7SQAAAAAAAlNFAAAAAAACIw0Bt
+                dk381MK+QD4QRrycSMdAIqYazs9azUB+a+NmWijRQAAAAAAAQM9AAAAAAACUwUBkI4LAMZXGQJUa
+                UlcFJs1ArRtMkc9T0UASDz7BW/uDQAAAAAAAAFA/UnXpBIfeg0B4uMNRQbqJQAAAAAAAAFA/AAAA
+                AAAAUD8AAAAAAABQPwTBYQZa+WtAc6GPgJdmc0AH6Lr40QlhQFhisogc955AAAAAAAAAUD8AAAAA
+                AABQP657Yyu2gYBAKhJuclhYYkDJC3K1ph+EQA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    avg_vehicle_age_inv: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 1.8501669393024534
+        scale: 0.44930815873964336
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                UzD/FR2bAkAAAAAAAADwPyuW2p2oYvs/xH4XryLf+D8AAAAAAADwP2vfsPYNawNAXMDCf9Oq/T+b
+                eEvMvYn9P9QrydKi0wNAHwOjd1Z58D+kvPwVu2gBQDgTA+yBM/E/AAAAAAAAFEBRe1sVUq0AQOwU
+                P+fIMvI/tG4wRT7rDECTlzBue5rlPwAAAAAAAFA/2g8bNToa5z/ClQdw9aTZPwAAAAAAAFA/qtjG
+                k/jd3z9Q28z2S6/gP3HR7D+BPOM/TJ5B8UQf6T8rMYzNeJLBP4tuZaBBGPE/WSGFAKLw0D8AAAAA
+                AABQPw9iEPsVh9Q/ItrdRzee0T+f/dGb7PDuPw==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    coupon_count: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 0.3857475696407769
+        scale: 0.7350887139267752
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                fdYNpshn/T+ViiWianXaP2nTISSVNs0/XZ79zeXZ7z8Wm04Wm07GP+0b1r5h7as/UcF01Fxyxz+A
+                PXAmBtjjP9eIhhV0jfA/wFZCutkAyz9oIe7ZVTHbP5DZ+Sf8mM0/YHgWHOPb0j/4MTv/hB/jP1Wk
+                6YPC6tY/MEU+6wZT5D8Dqc9fgosCQNL7x8HNz+c/ytmSWAcV4D//dj3AX13yP5yIfQV+wdk/p580
+                el5TzT9sQ6CW5AzaPwgh7i4ec+4/qebR1N9L+T+CRXoWGCnhP7C2cf8OvOc/I1g7myYX3j+ZogyJ
+                ok/nP9fX33cgVew/IZhhpH3+5T9SF6/r89/wPw==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    coupon_count_lag7: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 0.3748832093087979
+        scale: 0.7099197490882048
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                Mjv/hB+z+z8lpOVB21vaP2nTISSVNs0/VInuO5Xo7j8Wm04Wm07GP+0b1r5h7as/FJryQ159xj8y
+                O/+EH7PjP576otzlqe8/wFZCutkAyz982+mC9VjZP/bAmRhgD8w/YHgWHOPb0j/SK2P7Hb3iP3Ol
+                /MY2o9Y/5DiO4ziO4z/LvJm7zBQBQKaVLX1Mzuc/y9mSWAcV4D8wtYOnLQryP5qIfQV+wdk/p580
+                el5TzT++eY+kSqvZP2jqfo68au4/PDdmyXWf+D+ERXoWGCnhP7DwOrWwH+Y/3hmoW3E33T+cogyJ
+                ok/nPzx2nS10Q+w/9JbaV/X25T/a3dZaJY3wPw==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    coupon_flag_prev1: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 0.27858695133831557
+        scale: 0.44437466699004674
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                AnGh5iQQ5z941OwviCvTP8KP2fkn/Mg/9FIjOy814j8VrD4VrD7FP+0b1r5h7as/RRDSnx5Axj9f
+                lLs89UXZP/DolbH9jt4/UcV4ejBDxT/yMLYJ3X3UP5ax/Y5eGcs/HSRtiCp1wj8jn3WDKfLZPwu+
+                noo0fdA/Mjv/hB+z0z8f6ZT3H8zcPzyvBP+ZZt0/ids9m7Fy2T86RZd778ffP7Zhf0Z97Nc/p580
+                el5TzT8leckAxVbYP4XYiKz6Xt8/FPn59OoG4D+Q++Kf5ubXP/sJT7mz8d0/9SbLbz862j+mhyS8
+                oJTWP0Njv44agt8/V2ld6yQV3D9QPHKDUaDdPw==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    coupon_per_vehicle: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 2308.1843343394876
+        scale: 7237.677151454876
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                /0q1rcYGm0C82DMZbkGjQMkRtwTMdqBAQ/gytWQcvEAqWH0qWNfAQAAAAAAAiKhAmedEENL3m0Bs
+                RxGowfaYQMlF8KhOz6BA/AF/wB/SmkAzzxNhwjGpQDv/hB+zVrVAHOPbkneppEAUhQCVffeXQNGG
+                K7vVVppAhsMzWoARx0CTDlVzDzmiQHfZ/Q68srtAzZiapJ7YvEAUCErgBiLIQJi1y6p8MNZA4W6A
+                X2QIz0B1S/3/4OS3QJ6EJ3XV8KxAyIlqAw4iskCQRCs5C364QAepeozyyr1AaxIKFAB6zEAaJ26r
+                qVXDQKyL+Hdy4adA4XSB5CD9tEAaUpDQ61naQA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    encoder_length: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - &id009 !!python/object/apply:numpy.dtype
+          args:
+          - O8
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - '|'
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 63
+        - false
+        - - encoder_length
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - &id008 !!python/object/apply:numpy.dtype
+          args:
+          - f8
+          - false
+          - true
+          state: !!python/tuple
+          - 3
+          - <
+          - null
+          - null
+          - null
+          - -1
+          - -1
+          - 0
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id007
+      - !!binary |
+        qCIAAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id008
+        - false
+        - !!binary |
+          AAAAAAAA8D8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id008
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      with_mean: true
+      with_std: true
+    has_inventory: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 1.0
+        scale: 0.0009765625
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8A
+                AAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8AAAAAAADwPwAA
+                AAAAAPA/AAAAAAAA8D8AAAAAAABQPwAAAAAAAFA/AAAAAAAAUD8AAAAAAABQPwAAAAAAAFA/AAAA
+                AAAAUD8AAAAAAABQPwAAAAAAAFA/AAAAAAAAUD8AAAAAAABQPwAAAAAAAFA/AAAAAAAAUD8AAAAA
+                AABQPwAAAAAAAFA/AAAAAAAAUD8AAAAAAABQPw==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    inventory_est: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 2.6921831026064966
+        scale: 1.2383889901167666
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                U+SzbjBFLEB6T7kwhrAGQMAeOBMD7AFAU9aUNWVNEUAAAAAAAADwPwAAAAAAAPA/AAAAAAAA8D8D
+                7IEzMcAKQJ0E4kLNSSJAGU8PZqhiBECr/aGFuGcHQDgTA+yBM/E/AAAAAAAA8D+6RjSsoGsUQODY
+                ZtQayBNASCptOoSk8j+RtyTWMkslQLbpF6iOuPU/gPtwSlPo8T/vnCT7zXYCQAAAAAAAAFA/AAAA
+                AAAAUD8AAAAAAABQP39KofD0IPk/R9mMstQUFkDvcDRgz9rxP+XX5PN3awJAWSGFAKLw0D8AAAAA
+                AABQPxjYVioAsgJA+jxpKadeAED+b669xHTbPw==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    lag_1: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 71923.11787002815
+        scale: 64127.62609629004
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                qi/KXUzqEUGmYA7cWbHyQKPc5ak/VedAhfC6VVgT/kApaW0puQ/xQF100UVXBNVAuNkvxApN4UBp
+                WEHXaJz3QEc0rKA7TwJBAVsJ6Waf4kBZ9Cmcqg7yQISk0qZzaetAR1juaQT86kDiQs1JCMH5QHoX
+                j4BJOedAhpqTQGSK/kAd6JJ7a1wNQX7zxahBCfJA5TFozvwd7kB4oWfmX2v1QKwyHgTOeOpAlACf
+                Z9vq4kBG36lUb6veQLIcX6kDKPBA4czKTvng/0AV8ze/4E/uQBE3QI58NfVAdlF9Wodr7UBqsup4
+                CILqQCchpIyxLPZAI3Dvwtqh7UDSFD1NsCH4QA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    lag_28: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 67104.80340513415
+        scale: 64334.71843288461
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                AnGh5tQ/EEFIy4O21y3yQNgDZ2IwTOdAWVxa23qu/EBHjStHzYrwQNFFF110yshAPjKB3gmD4EC0
+                bjBFPnH3QHIcx3F8PgFBTVlT1jTY4UDMIVNuTDnwQHDUxaSLc+lA/jxMH2dz6kBV2nQIYQ75QJ53
+                8QjY5eVAq1hqd5JS/UBWe2/5mN8LQezlgvjLPvJAP5Rl5nUh7kBlXamV/ej1QHYCy+gzxepAh8Y8
+                VVLP3UDnIT6JpfHeQF03ChQmSPBAO04pB7Po/0A4fbnSYUPuQD2N37yZEfRAoIONicpW7EDZOUp+
+                lY7qQFc+iwsTf/ZA9h5p4Y117UApaJXQBaP4QA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    lag_7: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 71009.97421803017
+        scale: 64183.08447346723
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                voT2Ei6OEUEsEVWrc6jyQKPc5ak/VedAneTA0gmt/UApaW0puQ/xQF100UVXBNVAnrqWgxsh4UBk
+                dv4JX5X3QOB1rMkjCAJBAVsJ6Waf4kAu4V0DhpzxQJPFe1td5epAR1juaQT86kA7/4Qfa4v5QDFE
+                h/uTHOdAsYKuEfVQ/kAnFvETuiUNQV57nGf6DPJA6TFozvwd7kBJFUA2Rn/1QKwyHgTOeOpAlwCf
+                Z9vq4kDXo2ORbaTeQNm5ZVTyLvBAFZNbi9Hi/0AX8ze/4E/uQAMAuPBYv/RAD4hooe0k7UBrsup4
+                CILqQOBnIqDtQvZAX1yf5ren7UBhWXGLSDL4QA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    offday_run: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 8086.111111111111
+        scale: 18600.636974855333
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                PusGU+SUv0DlwhjCGvy/QNgDZ2KAlb9AxB1xR9ynvkD+IeD9IaK6QJqZmZmZKsNAPHUtB7d6wECl
+                0qZDSJS/QIv3tloylb9Ac/3u40S8v0Cek+xFBKa/QKVNh5BUl79A5t/XTaG7wkDx3lZLlpS/QOqD
+                wuoWM79ADDUngbiWv0D2hg0qoSnSQIcbPL4yVtJAb0bV58cp0kAHHUAhpqrRQKogaZzWqsxAsU2N
+                UXwQ1ECmq+dqjBLTQAeVsmx6KdJALM3jiLQp0kCgGLoaAWLSQHvkvytXNNJA5Tq5Izwq0kC1aUEU
+                hKXVQCJ0UsuNKdJA9D+vkM2D0kAgI6tkFSrSQA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    rain_mm_lag1: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 4.271021021021021
+        scale: 13.20414835650896
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                WEHXiIYVEUA2+ZAVygYRQFhB14iGFRFAkxfvnN9XEUA0IkM0IkMAQDGEBkNoMARA7HliWb4ZDUBY
+                QdeIhhURQFhB14iGFRFAzkjUIB9pDEAUhCQWfQoRQFhB14iGFRFARcmuTZTsEkBYQdeIhhURQGxq
+                RL7VZBBAWEHXiIYVEUDseSUihmgqQDtyzjIpfCpA7HklIoZoKkDQ52EIU6wqQKv3/vX5yRhAiYFV
+                +VWFIUCVCYlfKuUmQOx5JSKGaCpA7HklIoZoKkD1KF4aNb0nQNAqqh04dSpA7HklIoZoKkB2mHT1
+                ZX4rQOx5JSKGaCpAVHZObA/NKUDseSUihmgqQA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    region_rev_per_vehicle: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 22323.580474004895
+        scale: 13176.598895880381
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                zXB8JuXM1UCyThcvwuvVQM1wfCblzNVAfAfDaed/1UA71/ipkwnNQFMmvLBsXuBAVugHl1EZ10DN
+                cHwm5czVQM1wfCblzNVAyt3tDsYk1EAm9IPbeJ3VQM1wfCblzNVAg2vaz/bw3EDNcHwm5czVQLLI
+                GLmItdBAzXB8JuXM1UD5xZ6oTLzJQBQAmglC8slA+cWeqEy8yUD2Lce+O0nJQFbvX9kBY7tAlbvY
+                Ntm9zEBwqtOGMkHLQPnFnqhMvMlA+cWeqEy8yUDiWW277dTGQPYEvJU8V8lA+cWeqEy8yUC+ELig
+                Kf7LQPnFnqhMvMlAJd+WbJdywED5xZ6oTLzJQA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    region_total_rev: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 25961711.743243244
+        scale: 13144440.714690428
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                B1Pk+07CeEGAwB4/pCx4QQdT5PtOwnhBNMT758P2eEF7bUrfG1d2QdeReu3qonNBAOk4JAvQdkEH
+                U+T7TsJ4QQdT5PtOwnhBSxHlNob7eEEuBZiCBMd4QQdT5PtOwnhBH3zwMUs2dkEHU+T7TsJ4QdI3
+                +TycyXpBB1Pk+07CeEF2vt4WLxJpQXEKICtPnWdBdr7eFi8SaUHG1J1vrCNpQdDFuLrNMWVBSbfY
+                J/X+YEFVDuDEVdZlQXa+3hYvEmlBdr7eFi8SaUG2MNLazq5pQZRC+gu9GmlBdr7eFi8SaUEwk+cv
+                uIpkQXa+3hYvEmlB7m4OC1niakF2vt4WLxJpQQ==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    region_vehicle_count: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 1341.9774774774776
+        scale: 562.8223435771981
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                Xxnb7+j3lEBx5j9gj3WUQF8Z2+/o95RA+jUYp19XlUB8O0h8O7iYQAV5SpCnPINAjuj2ZFtzkkBf
+                Gdvv6PeUQF8Z2+/o95RAAVsJ6WYplkA3BlBGaReVQF8Z2+/o95RAT+KaAYJqikBfGdvv6PeUQGKI
+                DvdnBZpAXxnb7+j3lEBTDl3oT7qBQJ0Wud8qSYFAUw5d6E+6gUCfAWAaaoSBQNC9C2UVNWtAz3iv
+                tpgSOkDP+SL7DO5/QFMOXehPuoFAUw5d6E+6gUANlAYpY/mAQKUgXTe+qIFAUw5d6E+6gUAieXu/
+                RA5zQFMOXehPuoFAm2x5cHibdkBTDl3oT7qBQA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    region_vehicle_mean_rev: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 0.3002481191239835
+        scale: 0.0009765625
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                bgkxmpiOAkDC7XpRszLTPwJrrnTUO9M/y1O6IH2G5D9X9l0y0627P2QrXHkA76E/DwZAZMoptz9b
+                aP4qGQ3bP7WSjIXRTu0/uoklcy/OzT97FvpvbRTQP5/nc773zMA/Y+eakQewmT97Nc2uYTvjP0oW
+                g/8CvOE/OnKBzoUg1D8AAAAAAABQPwAAAAAAAFA/AAAAAAAAUD8AAAAAAABQPwAAAAAAAFA/AAAA
+                AAAAUD8AAAAAAABQPwAAAAAAAFA/AAAAAAAAUD8AAAAAAABQPwAAAAAAAFA/AAAAAAAAUD8AAAAA
+                AABQPwAAAAAAAFA/AAAAAAAAUD8AAAAAAABQPw==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    relative_time_idx: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id009
+        - false
+        - - relative_time_idx
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id008
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id007
+      - !!binary |
+        qCIAAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id008
+        - false
+        - !!binary |
+          AAAAAAAA8D8=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id008
+        - false
+        - !!binary |
+          AAAAAAAAAAA=
+      with_mean: true
+      with_std: true
+    rev_per_vehicle_center: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id009
+        - false
+        - - rev_per_vehicle_center
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id008
+        - false
+        - !!binary |
+          4CDAkb+M4kA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id007
+      - !!binary |
+        qCIAAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id008
+        - false
+        - !!binary |
+          718ZtPmO2EA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id008
+        - false
+        - !!binary |
+          2+/gXfXYwkE=
+      with_mean: true
+      with_std: true
+    rev_per_vehicle_scale: !!python/object:sklearn.preprocessing._data.StandardScaler
+      _sklearn_version: 1.6.1
+      copy: true
+      feature_names_in_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id009
+        - false
+        - - rev_per_vehicle_scale
+      mean_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id008
+        - false
+        - !!binary |
+          82oeP5HS4UA=
+      n_features_in_: 1
+      n_samples_seen_: !!python/object/apply:numpy._core.multiarray.scalar
+      - *id007
+      - !!binary |
+        qCIAAAAAAAA=
+      scale_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id008
+        - false
+        - !!binary |
+          8zgaFDEY1EA=
+      var_: !!python/object/apply:numpy._core.multiarray._reconstruct
+        args:
+        - *id001
+        - !!python/tuple
+          - 0
+        - !!binary |
+          Yg==
+        state: !!python/tuple
+        - 1
+        - !!python/tuple
+          - 1
+        - *id008
+        - false
+        - !!binary |
+          RWgURp88uUE=
+      with_mean: true
+      with_std: true
+    roll_mean_7: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 64538.43605605845
+        scale: 37091.36256241673
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                4gxROhdK8UCJZiTuThntQCbQW/T1L/hAxTgIxY9U7kDBYfGs4TnnQL1CcSsELu5AtW907nUj6UCW
+                417gH47LQED379VMhfZA6hnRZb5q/EDMqNPSpcP6QHw72TLjnOtAZbmnEQZZ8EBOKoBjgn7cQJXb
+                xB4yZfxAEv0AVc5k+kDyTGTHuAPkQKDLlkyDX+FAMf7nlj+Q60B3N0lw7xvgQMEWScpyG9hAZFMf
+                lipG4EBzQFHQvzfeQC02s1gT18JA4lh5r/p06kDT4AHztqjwQBwGXsYZ3e9AyBNm3Xt34UDh6tJW
+                W8HiQPvEE0hl+NFAo2399bhI8kC9x4XGqobwQA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    roll_std_7: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 70767.87620013164
+        scale: 33030.11389960511
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                cXsmCgBc/UA0ig0tiSnwQGS8VYtKvP1ATOryMP538UCMnhCfC4HuQD8nDljE3e9AcuTd3cuZ7kCz
+                Gjd5XOfhQBea/qGjY/5AcQtAjsOq/EDKmx/9j5r8QKbQeowBs+9AePHh2P0V8UAmHtXM4xTrQIkj
+                IMG3eQBBMb6HfPQr/UCoLuNgLcf0QK72MCnLZN5Ar1Ae6zWY9EBbsH3UxLvdQEkLp1CPQtpALvgw
+                kufE3ECaXp1tv4rdQACFeMy0bdhAC/PALuDM9ECJy0AsMZX0QDrE7pDD+/NAb7SGkbyQ30DMXmHg
+                5z7gQPIywGmfAuBAgMDYNPri9UCgSG0UEzvzQA==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    utilization_7: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 2.53849052540913
+        scale: 1.298460216829639
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                u1Pn2MzO2D/3Kjm6wEL8P3sJ7SW0lwNA0H1v9N8P9j+rTwWrTwULQFj7hrVvWA9A3vcWsPDfDEB+
+                ylsr5qfYP9c20YkKTew/QV/QF/QFBUAmlx/wibUHQI1oWEHXiAxAyvz7uik0EUBL2RVnefncP/M2
+                P9t1svM/eRMsjJs3EUAK854l6NLTP97zy/4FdfM/CvcdP2F09T8fbxDc6oH0PzAsoWSbj/A/Yqi9
+                lBEL9T/ODXJSLCv1P+cm9jBKGNA/B2Ct8Ek58D+Yv0C+I+73P0fkMFZrHwBAMjEyWj7n9z/yXAE3
+                UOf1P2cEJ/JNKtA/tOq7Y7CH7D/sQ4ifjdv1Pw==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+    vehicle_count: !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+      _groups:
+      - vehicle_type
+      _method_kwargs: {}
+      center: true
+      groups:
+      - vehicle_type
+      method: standard
+      method_kwargs: {}
+      missing_:
+        center: 0.8461911693352742
+        scale: 0.8022191178413522
+      norm_: !!python/object:pandas.core.frame.DataFrame
+        _flags:
+          allows_duplicate_labels: true
+        _metadata: *id003
+        _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+        - !!python/tuple
+          - !!python/object/apply:pandas._libs.internals._unpickle_block
+            - !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+                - 16
+              - *id004
+              - false
+              - !!binary |
+                OY7jOI7jEkAcO2xx5MTzP+9ttWTx3uY/jYYJyGiYAEC3lLS2lLTmP/KUIE8J8tQ//N4CFv6b5j+5
+                UHMSiAv9PyGptOkQkgJAlpBuNsBW4j/E2CZ091HvP4A9cCYG2OM/XXTRRRdd5D+9Mrbf0Sv7PyeZ
+                K+U3tuk/HMdxHMdx7D+Rd6bnnekFQOABx7rCX+4/U9ttJBYn5j8fhbLUUj/zPwLtio9fLd0/IT1+
+                9Ng63j+VrdDPYDvdP9Ahey9IDus/9JbLFBSI+T+Zj1urRknoP9tiqNrBs+0/9+QqKYfn4D9OleDK
+                1eXeP7KKpfanXPI/nAI9eDql6z+YvMmk4fHgPw==
+            - !!python/object/apply:builtins.slice
+              - 0
+              - 2
+              - 1
+            - 2
+        - - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 2
+                - *id005
+                - false
+                - - center
+                  - scale
+              name: null
+          - !!python/object/apply:pandas.core.indexes.base._new_Index
+            - *id002
+            - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+                args:
+                - *id001
+                - !!python/tuple
+                  - 0
+                - !!binary |
+                  Yg==
+                state: !!python/tuple
+                - 1
+                - !!python/tuple
+                  - 16
+                - *id006
+                - false
+                - !!binary |
+                  AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                  AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                  AAAAAAAAEAAAAAAAAAA=
+              name: vehicle_type
+        _typ: dataframe
+        attrs: {}
+      scale_by_group: false
+      transformation: null
+  static_categoricals:
+  - spot_id
+  - vehicle_type
+  - region_code
+  static_reals: null
+  target: rev_per_vehicle
+  target_normalizer: &id019 !!python/object:pytorch_forecasting.data.encoders.GroupNormalizer
+    _groups:
+    - vehicle_type
+    _method_kwargs: {}
+    center: true
+    groups:
+    - vehicle_type
+    method: standard
+    method_kwargs: {}
+    missing_:
+      center: 30674.05822984021
+      scale: 31210.360056184323
+    norm_: !!python/object:pandas.core.frame.DataFrame
+      _flags:
+        allows_duplicate_labels: true
+      _metadata: *id003
+      _mgr: !!python/object/apply:pandas.core.internals.managers.BlockManager
+      - !!python/tuple
+        - !!python/object/apply:pandas._libs.internals._unpickle_block
+          - !!python/object/apply:numpy._core.multiarray._reconstruct
+            args:
+            - *id001
+            - !!python/tuple
+              - 0
+            - !!binary |
+              Yg==
+            state: !!python/tuple
+            - 1
+            - !!python/tuple
+              - 2
+              - 16
+            - *id004
+            - false
+            - !!binary |
+              OQZZJLB820DuD6uCBp7dQPJVUW94u9lAmEl5/zdd4EApaW0puQ/xQF100UVXBNVA13Jws99V4UBE
+              aT2L0YTgQPpR4n56UtZArSlryroH0kDAPWjxAEveQD5wJgZ4pelAR1juaQT86kAVMdS4UFTZQOub
+              59Tn2cVAc2TIPi1K/EABWP4nVobTQN56gxgWU95ARDnW6kOA4EDVvdVcnXLaQKwyHgTOeOpAlQCf
+              Z9vq4kBUtc79F6LeQBH83+vP39ZAngtgFkML1kB9ev87xD3eQPm1Pn9eSeJAQwSCMwex6kBusup4
+              CILqQFW3ApgwP9hAXwDuusrczUDPSrmM4PD3QA==
+          - !!python/object/apply:builtins.slice
+            - 0
+            - 2
+            - 1
+          - 2
+      - - !!python/object/apply:pandas.core.indexes.base._new_Index
+          - *id002
+          - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 2
+              - *id005
+              - false
+              - - center
+                - scale
+            name: null
+        - !!python/object/apply:pandas.core.indexes.base._new_Index
+          - *id002
+          - data: !!python/object/apply:numpy._core.multiarray._reconstruct
+              args:
+              - *id001
+              - !!python/tuple
+                - 0
+              - !!binary |
+                Yg==
+              state: !!python/tuple
+              - 1
+              - !!python/tuple
+                - 16
+              - *id006
+              - false
+              - !!binary |
+                AQAAAAAAAAACAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAI
+                AAAAAAAAAAkAAAAAAAAACgAAAAAAAAALAAAAAAAAAAwAAAAAAAAADQAAAAAAAAAOAAAAAAAAAA8A
+                AAAAAAAAEAAAAAAAAAA=
+            name: vehicle_type
+      _typ: dataframe
+      attrs: {}
+    scale_by_group: false
+    transformation: null
+  time_idx: time_idx
+  time_varying_known_categoricals:
+  - dow
+  - week
+  - month
+  - quarter
+  - is_weekend
+  - is_holiday
+  time_varying_known_reals:
+  - offday_run
+  - rain_mm_lag1
+  - RH
+  - W
+  - inventory_est
+  - has_inventory
+  - avg_vehicle_age_inv
+  - avg_standard_rate_inv
+  time_varying_unknown_categoricals: null
+  time_varying_unknown_reals:
+  - lag_1
+  - lag_7
+  - lag_28
+  - roll_mean_7
+  - roll_std_7
+  - utilization_7
+  - vehicle_count
+  - coupon_count
+  - coupon_flag_prev1
+  - coupon_count_lag7
+  - coupon_per_vehicle
+  - region_total_rev
+  - region_vehicle_count
+  - region_rev_per_vehicle
+  - region_vehicle_mean_rev
+  variable_groups: null
+  weight: null
+dropout: 0.2914981522194919
+embedding_labels:
+  dow: *id010
+  is_holiday: *id011
+  is_weekend: *id012
+  month: *id013
+  quarter: *id014
+  region_code: *id015
+  spot_id: *id016
+  vehicle_type: *id017
+  week: *id018
+embedding_paddings:
+- vehicle_type
+embedding_sizes:
+  dow: !!python/tuple
+  - 7
+  - 5
+  is_holiday: !!python/tuple
+  - 2
+  - 1
+  is_weekend: !!python/tuple
+  - 2
+  - 1
+  month: !!python/tuple
+  - 12
+  - 6
+  quarter: !!python/tuple
+  - 4
+  - 3
+  region_code: !!python/tuple
+  - 1
+  - 1
+  spot_id: !!python/tuple
+  - 1
+  - 1
+  vehicle_type: !!python/tuple
+  - 17
+  - 8
+  week: !!python/tuple
+  - 52
+  - 15
+hidden_continuous_size: 21
+hidden_continuous_sizes: {}
+hidden_size: 64
+learning_rate: 0.0008709635899560804
+log_gradient_flow: false
+log_interval: 10
+log_val_interval: 10
+lstm_layers: 1
+max_encoder_length: 90
+monotone_constaints: {}
+monotone_constraints: {}
+optimizer: ranger
+optimizer_params: null
+output_size: 1
+output_transformer: *id019
+reduce_on_plateau_min_lr: 1.0e-05
+reduce_on_plateau_patience: 4
+reduce_on_plateau_reduction: 2.0
+share_single_variable_networks: false
+static_categoricals:
+- spot_id
+- vehicle_type
+- region_code
+static_reals:
+- encoder_length
+- rev_per_vehicle_center
+- rev_per_vehicle_scale
+time_varying_categoricals_decoder:
+- dow
+- week
+- month
+- quarter
+- is_weekend
+- is_holiday
+time_varying_categoricals_encoder:
+- dow
+- week
+- month
+- quarter
+- is_weekend
+- is_holiday
+time_varying_reals_decoder:
+- offday_run
+- rain_mm_lag1
+- RH
+- W
+- inventory_est
+- has_inventory
+- avg_vehicle_age_inv
+- avg_standard_rate_inv
+- relative_time_idx
+time_varying_reals_encoder:
+- offday_run
+- rain_mm_lag1
+- RH
+- W
+- inventory_est
+- has_inventory
+- avg_vehicle_age_inv
+- avg_standard_rate_inv
+- relative_time_idx
+- lag_1
+- lag_7
+- lag_28
+- roll_mean_7
+- roll_std_7
+- utilization_7
+- vehicle_count
+- coupon_count
+- coupon_flag_prev1
+- coupon_count_lag7
+- coupon_per_vehicle
+- region_total_rev
+- region_vehicle_count
+- region_rev_per_vehicle
+- region_vehicle_mean_rev
+weight_decay: 0.0
+x_categoricals:
+- spot_id
+- vehicle_type
+- region_code
+- dow
+- week
+- month
+- quarter
+- is_weekend
+- is_holiday
+x_reals:
+- encoder_length
+- rev_per_vehicle_center
+- rev_per_vehicle_scale
+- offday_run
+- rain_mm_lag1
+- RH
+- W
+- inventory_est
+- has_inventory
+- avg_vehicle_age_inv
+- avg_standard_rate_inv
+- relative_time_idx
+- lag_1
+- lag_7
+- lag_28
+- roll_mean_7
+- roll_std_7
+- utilization_7
+- vehicle_count
+- coupon_count
+- coupon_flag_prev1
+- coupon_count_lag7
+- coupon_per_vehicle
+- region_total_rev
+- region_vehicle_count
+- region_rev_per_vehicle
+- region_vehicle_mean_rev
